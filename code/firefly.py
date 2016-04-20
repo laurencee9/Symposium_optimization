@@ -17,7 +17,7 @@ def getDistance(filepath):
 		a = line.split("\t")
 		i = int(a[0])
 		j = int(a[1])
-		distance = int(a[2])
+		distance = float(a[2][:-2])
 		Dict_distance[(i,j)] = distance
 		Dict_distance[(j,i)] = distance
 	return Dict_distance
@@ -27,6 +27,8 @@ def getDistanceForConfiguration(configuration,A):
 	for i in range(1,len(configuration)):
 		distance += A[(configuration[i-1],configuration[i])]
 	return distance
+
+
 
 def initializeFirely(numberFirely,N,A):
 	Fireflies = []
@@ -40,91 +42,73 @@ def initializeFirely(numberFirely,N,A):
 	# newFire = Firefly()
 	# newFire.position = [25, 38, 46, 45, 4, 34, 6, 0, 21, 9, 10, 17, 47, 13, 48, 32, 16, 11, 18, 19, 7, 5, 44, 30, 39, 20, 26, 15, 35, 40, 23, 8, 3, 33, 2, 42, 36, 12, 29, 24, 31, 1, 27, 43, 28, 22, 41, 37, 14, 49]
 	# newFire.intensity = getDistanceForConfiguration(newFire.position,A)
-	Fireflies.append(newFire)
+	# Fireflies.append(newFire)
 	
 	return Fireflies
 
-def updateFireflies(fireFlyA, fireFlyB,A):
-	r = fireFlyB.intensity-fireFlyA.intensity
+def updateFireflies(fireFlyA, fireFlyB,A, beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
+
+	# Move B in direction of A
+
+	#hamming distance
+	r = 0
+	G = []
+	for i in range(len(fireFlyA.position)):
+		if fireFlyA.position[i]!=fireFlyB.position[i]:
+			r += 1
+			G.append(i)
+	# print(r)
 	#on va faire 3 permutations disons
-	nPermuation = r
+	nPermuation = int(rdm.random()*r*gamma)
+	# nPermuation = int((beta0*np.exp(-1.0*gamma*r*r)))
 
+	# print(nPermuation)
 	for n in range(nPermuation):
+		
+		index = G[int(np.floor(rdm.random()*len(G)))]
 
-		index = int(np.floor(rdm.random()*len(fireFlyA.position)))
 
 		newthing = fireFlyA.position[index]
 		oldindex = fireFlyB.position.index(newthing)
 		fireFlyB.position[oldindex] = fireFlyB.position[index]
 		fireFlyB.position[index] = newthing
-		# print("inte",getDistanceForConfiguration(fireFlyB.position,A))
 
 	fireFlyB.intensity = getDistanceForConfiguration(fireFlyB.position,A)
 
-	# print(fireFlyB.intensity-fireFlyA.intensity,r)
 
 
 
-def moveFirefly(Fireflies, A):
+def moveFirefly(Fireflies, A, t,beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
 
 	for i in range(len(Fireflies)):
 		hasMoved = False
+
 		for j in range(len(Fireflies)):
+
 			if Fireflies[j].intensity < Fireflies[i].intensity:
 			
-				updateFireflies(Fireflies[j], Fireflies[i],A)
+				updateFireflies(Fireflies[j], Fireflies[i],A, beta0=beta0, gamma=gamma, alpha=alpha, delta=delta)
 				Fireflies[i].intensity = getDistanceForConfiguration(Fireflies[i].position,A)
 				hasMoved = True
 
 		if hasMoved == False:
-			# print
 			#random walk
-			index1 = int(np.floor(rdm.random()*len(Fireflies[i].position)))
-			index2 = int(np.floor(rdm.random()*len(Fireflies[i].position)))
-
-			u = Fireflies[i].position[index1]
-			Fireflies[i].position[index1] = Fireflies[i].position[index2]
-			Fireflies[i].position[index2] = u
-
-
-def moveFireflyV2(Fireflies, A):
-
-	for i in range(len(Fireflies)):
-		hasMoved = False
-		bestj = -1
-		bestintensity = 20
-
-		for j in range(len(Fireflies)):
-			if Fireflies[i].intensity - Fireflies[j].intensity > bestintensity:
-				bestintensity = Fireflies[j].intensity
-				bestj = j
-
-		if bestj>=0:
-			# print(bestj)
-			updateFireflies(Fireflies[bestj], Fireflies[i],A)
-			hasMoved = True
-
-		if hasMoved == False:
-			# print("random")
-			#random walk
-			for l in range(0,5):
+			for asd in range(int(alpha*delta**t*rdm.random())):
 				index1 = int(np.floor(rdm.random()*len(Fireflies[i].position)))
 				index2 = int(np.floor(rdm.random()*len(Fireflies[i].position)))
-
 				u = Fireflies[i].position[index1]
 				Fireflies[i].position[index1] = Fireflies[i].position[index2]
 				Fireflies[i].position[index2] = u
+				Fireflies[i].intensity = getDistanceForConfiguration(Fireflies[i].position,A)
 
 
-
-def doFirefly(A, numberFirely, N, tmax=100):
+def doFirefly(A, numberFirely, N, tmax=100,beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
 
 	Fireflies = initializeFirely(numberFirely,N,A)
 
 	for t in range(tmax):
-		
 
-		moveFireflyV2(Fireflies,A)
+		moveFirefly(Fireflies,A,t,beta0=beta0, gamma=gamma, alpha=alpha, delta=delta)
 
 	for fire in Fireflies:
 		print(fire.intensity)
@@ -133,7 +117,7 @@ def doFirefly(A, numberFirely, N, tmax=100):
 
 
 
-A = getDistance("distance.txt")
-numberFirely = 200
-N = 50
-doFirefly(A, numberFirely,  N, tmax=500)
+A = getDistance("geometricDistance.txt")
+numberFirely = 40
+N = 20
+doFirefly(A, numberFirely,  N, tmax=100, beta0=3.0, gamma=0.2, alpha=6, delta=0.95)
