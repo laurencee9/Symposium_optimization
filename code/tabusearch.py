@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random as rdm
 
+
+
 def getDistance(filepath):
 
 	fileO = open(filepath,"r")
