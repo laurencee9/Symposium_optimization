@@ -14,7 +14,7 @@ Date : 23/04/2016
 #-----------------------
 import numpy as np
 from genetic_framework import *
-from knapsack_dataset.p01_variables import *
+from knapsack_dataset.p08_variables import *
 
 #--------------
 #Parameters

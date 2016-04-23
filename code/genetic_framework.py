@@ -74,14 +74,21 @@ class Salesman_path(object):
     def __init__(self, *args, **kwargs):
         self.genome = kwargs.get('genome', None)
         if self.genome == None:
-            self.genome = shuffle(np.arange(0,args[0]))
+            self.genome = np.arange(0,args[0])
+            shuffle(self.genome)
         self.distanceDict = kwargs.get('distance')
         self.fitness = self.evaluate_fitness()
 
     def evaluate_fitness(self):
-        totalDist = np.sum([self.distanceDict[(self.genome[i],self.genome[i+1])]
-            for i in range(len(genome)-1)])
-        fitness = 1./totalDist
+        totalDist = 0.
+        for i in range(len(self.genome)-1):
+            if self.genome[i] < self.genome[i+1]:
+                totalDist += self.distanceDict[(self.genome[i],
+                    self.genome[i+1])]
+            else:
+                totalDist += self.distanceDict[(self.genome[i+1],
+                    self.genome[i])]
+        fitness = 1/totalDist**2
         return fitness
 
     def change_genome(self,p_genome):
@@ -89,7 +96,7 @@ class Salesman_path(object):
         self.fitness = self.evaluate_fitness()
 
     def merge(self,p_path):
-        allele = randint(0,len(newGenome)-1) # determine the crossover
+        allele = randint(0,len(self.genome)-1) # determine the crossover
         newGenome = list(self.genome[0:allele])
         for i in range(len(p_path.genome)):
             if not p_path.genome[i] in newGenome:
@@ -144,7 +151,11 @@ def next_generation(p_population, p_selection_method, p_elitism = True,
         newPopulation.remove(newPopulation[randint(0,N-1)])
         newPopulation.append(deepcopy(p_population[np.argmax(fitnessList)]))
     return newPopulation, np.max(fitnessList)
-        
+
+def get_mostAdapted(p_population):
+    fitnessList = np.array([x.fitness for x in p_population])
+    return p_population[np.argmax(fitnessList)]
+
 
 if __name__ == '__main__':
     from knapsack_dataset.p01_variables import *

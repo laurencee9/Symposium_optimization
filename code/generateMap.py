@@ -24,6 +24,14 @@ def saveDist(filename,Dist):
 		fileO.write(str(edge[0])+"\t"+str(edge[1])+"\t"+str(Dist[edge])+"\n")
 	return
 
+def loadDist(filename):
+	mat = np.loadtxt(filename)
+	Dist = {}
+	for row in mat:
+		Dist[(row[0],row[1])] = row[2]
+	return Dist
+
+
 def showPoints(U):
 	for i in range(len(U)):
 		plt.plot(U[i,0],U[i,1],"o",markersize=8,markerfacecolor="white",markeredgecolor="red",markeredgewidth=2)
@@ -32,11 +40,11 @@ def showPoints(U):
 	plt.show()
 
 
+if __name__ == '__main__':
+	N = 20
+	U = generatePoints(N)
+	np.savetxt("geometricPosition.txt",U)
+	Dict = getDistance(U)
+	saveDist("geometricDistance.txt",Dict)
 
-N = 20
-U = generatePoints(N)
-np.save("geometricPosition.txt",U)
-Dict = getDistance(U)
-saveDist("geometricDistance.txt",Dict)
-
-showPoints(U)
+	showPoints(U)
