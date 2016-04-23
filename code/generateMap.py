@@ -39,4 +39,4 @@ np.save("geometricPosition.txt",U)
 Dict = getDistance(U)
 saveDist("geometricDistance.txt",Dict)
 
-# showPoints(U)
+showPoints(U)
