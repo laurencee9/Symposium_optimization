@@ -25,7 +25,6 @@ from copy import deepcopy
 #-----------------
 # Individual class
 #-----------------
-
 class Knapsack(object):
     """Class to identify the individual from a population with
        their genome, fitness, merging and mutating properties.  """
@@ -88,7 +87,7 @@ class Salesman_path(object):
             else:
                 totalDist += self.distanceDict[(self.genome[i+1],
                     self.genome[i])]
-        fitness = 1/totalDist**2
+        fitness = 1/totalDist
         return fitness
 
     def change_genome(self,p_genome):
@@ -125,6 +124,22 @@ def selection_proportional(p_fitnessList, p_numberOfCouples):
         couple = choice(np.arange(0,N),2,replace=False,p=normFitnessList)
         coupleList.append(couple)
     return coupleList
+
+def selection_tournament(p_fitnessList, p_numberOfCouples):
+    N = len(p_fitnessList)
+    coupleList = []
+    for i in range(p_numberOfCouples):
+        couple = []
+        for j in range(2):
+            #We select 2 individual the winner is added to couple
+            individuals = choice(np.arange(0,N),2,replace=False)
+            if p_fitnessList[individuals[0]] >= p_fitnessList[individuals[1]]:
+                couple.append(individuals[0])
+            else:
+                couple.append(individuals[1])
+        coupleList.append(couple)
+    return coupleList
+
 
 def next_generation(p_population, p_selection_method, p_elitism = True, 
     p_mergeProbability = 0.7, p_mutateProbability = 0.5):
