@@ -33,10 +33,11 @@ def showPoints(U):
 
 
 
-N = 20
+N = 10
+
 U = generatePoints(N)
-np.save("geometricPosition.txt",U)
+np.save("./salesman/geometricPosition_"+str(N)+".txt",U)
 Dict = getDistance(U)
-saveDist("geometricDistance.txt",Dict)
+saveDist("./salesman/geometricDistance_"+str(N)+".txt",Dict)
 
 # showPoints(U)
