@@ -197,9 +197,12 @@ def show3dplotTrajectory(info,tabu):
 
 
 	plt.xlim([info.xmin,info.xmax])
+	plt.xlabel("$x$",fontsize=20)
+	plt.ylabel("$y$",fontsize=20)
+	
 	ax = plt.gca()
 	ax.set_zticks([])
-
+	ax.set_zlabel("$f(x,y)$",fontsize=20)
 
 	plt.show()
 
@@ -209,7 +212,7 @@ func = lambda x,y : (np.sin((x**2.0+y**2.0)/2.0)/((x/5)**2.0+(y/5.0)**2.0))*-1
 # func = lambda x,y : np.sin((x**2.0+y**2.0)/20.0)
 # func = lambda x,y : fourMaximum(x,y)
 
-xmin, xmax, ymin, ymax,hx,hy = -5.0,5.0,-5.0,5.0,0.05,0.05
+xmin, xmax, ymin, ymax,hx,hy = -5.0,5.0,-5.0,5.0,0.01,0.01
 
 info = Info(xmin, xmax, ymin, ymax,func,hx,hy)
 

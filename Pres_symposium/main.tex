@@ -9,7 +9,7 @@
 \usepackage[francais]{babel}
 \usepackage{listings}
 \usepackage{transparent}
-\usepackage{multimedia}
+\usepackage{multimedia}  
 \definecolor{myblue}{HTML}{E3F3DA}
 
 \definecolor{darkorange}{HTML}{A62500}
@@ -252,15 +252,66 @@
 \end{frame}
 
 \begin{frame}{Problème du vendeur}
-$N=20$
+\begin{center}
+  Meilleurs parcours pour $N=20$.
+\end{center}
+\vspace{-0.5cm}
+\begin{table}
+  \centering
+  \begin{tabular}{C{3cm}C{3cm}C{3cm}}
+  \textbf{Tabou} & \textbf{Lucioles} & \textbf{Évolutif}
+  \end{tabular}
+\end{table}
+\vspace{-1cm}
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.32\textwidth]{figures/salesman_tabu_n20.pdf}
     \includegraphics[width=0.32\textwidth]{figures/salesman_firefly_n20.pdf}
+    % \includegraphics[width=0.32\textwidth]{figures/salesman_firefly_n20.pdf}
 \end{figure}
-\textbf{Tabou :} 35.7656236297 (moyen 40.1709380389)
-\textbf{Lucioles :} 37.2932715277 (moyen 42.413128312)
+
+
+% \begin{table}[tb]
+%   \centering
+%   \begin{tabular}{R{1cm}C{2cm}C{2cm}C{2cm}}
+%   \hline
+
+%   \hline
+%   &\textbf{Tabou} & \textbf{Lucioles} & \textbf{Évolutif}\\
+%   \hline
+%   Meilleur & 35.766 & 40.171 &40.171 \\
+%   Moyen & 37.293 & 42.413 &40.171\\
+%   \hline
+%   \end{tabular}
+% \end{table}
+
 \end{frame}
+
+
+
+\begin{frame}{Comparaison des trois algorithmes}
+  \textbf{Distribution de la qualité des solutions}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/distri_distance.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Comparaison des trois algorithmes}
+  \begin{center}\textbf{Évaluation sommaire des méthodes}\end{center}
+  \begin{table}
+  \centering
+  \begin{tabular}{C{2.6cm}C{2cm}C{2cm}C{2cm}}
+  &\textbf{Tabou} & \textbf{Lucioles} & \textbf{Évolutif}\\
+  \hline\\
+  \textit{Qualité} & 9/10 & (7/10) &\\\\
+  \textit{Vitesse de convergence} & 10/10 & (8/10) & \\\\
+   \textit{Implémentation} & 10/10 & 6/10 & \\
+  \end{tabular}
+\end{table}
+\end{frame}
+
+
 
 
 \end{document}

@@ -145,10 +145,11 @@ N=20
 A = getDistance("./salesman/geometricDistance_"+str(N)+".txt")
 numberFirely = 40
 Y = []
-for i in range(50):
-	Fireflies = doFirefly(A, numberFirely,  N, tmax=100, beta0=3.0, gamma=0.000, alpha=10, delta=0.97)
+for i in range(100):
+	Fireflies = doFirefly(A, numberFirely,  N, tmax=60, beta0=3.0, gamma=0.005, alpha=10, delta=0.97)
 	Y.append(Fireflies[0].intensity)
-print(np.mean(Y))
+
+np.save("N_20_firefly_best2",Y)
 
 # U = np.load("./salesman/geometricPosition_"+str(N)+".txt.npy")
 # showBestSolution(U,Fireflies)
