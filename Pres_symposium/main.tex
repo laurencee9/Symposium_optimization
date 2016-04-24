@@ -9,7 +9,7 @@
 \usepackage[francais]{babel}
 \usepackage{listings}
 \usepackage{transparent}
-
+\usepackage{multimedia}
 \definecolor{myblue}{HTML}{E3F3DA}
 
 \definecolor{darkorange}{HTML}{A62500}
@@ -90,9 +90,9 @@
 
 \textbf{Métaheuristique}\\
   Algorithme général qu'on doit adapter au problème considéré.
-
 \end{frame}
 
+\section{Recherche tabou}
 \begin{frame}{Recherche tabou}
  \textbf{Recherche Tabou}\\
   \textit{Type : }Métaheuristique\\
@@ -109,15 +109,42 @@
 
 
 \begin{frame}{Exemple - Recherche tabou}
-  \textit{On cherche à descendre de la montagne.}
+  \textit{On veut aller au bas de la montagne.}
   \begin{figure}[tb]
     \centering
-    \includegraphics<1>[width=0.7\textwidth]{figures/tabou1.pdf}
-    \includegraphics<2>[width=0.7\textwidth]{figures/tabou2.pdf}
-    \includegraphics<3>[width=0.7\textwidth]{figures/tabou3.pdf}
+    \includegraphics<1>[width=0.8\textwidth]{figures/tabou1v2.pdf}
+    \includegraphics<2>[width=0.8\textwidth]{figures/tabou2v2.pdf}
+    \includegraphics<3>[width=0.8\textwidth]{figures/tabou3v2.pdf} 
   \end{figure}
 \end{frame}
 
+
+\begin{frame}{Exemple - Recherche tabou}
+
+
+  \begin{figure}[tb]
+    \centering
+    Pour $f(x,y) = \sin(x^2+y^2)$
+    \includegraphics[width=0.7\textwidth]{figures/3dtabufunc.pdf}
+  \end{figure}
+  % \vspace*{-0.cm} 
+\end{frame}
+
+
+\begin{frame}{Exemple - Recherche tabou}
+
+
+  \begin{figure}[tb]
+    \centering
+    Pour $f(x,y) = \dfrac{\sin(x^2+y^2)}{x^2+y^2}$
+    \includegraphics[width=0.6\textwidth]{figures/3dtabufunc2.pdf}
+  \end{figure}
+  % \vspace*{-0.cm} 
+\end{frame}
+
+
+
+\section{Algorithme des lucioles}
 \begin{frame}{Algorithme des lucioles}
    \textbf{Recherche par lucioles}\\
   \textit{Type : }Métaheuristique\\
@@ -127,18 +154,34 @@
   \hrule
 \vspace{0.2cm}
 \textbf{Principes}\\
-2. Chaque luciole a une luminosité $I$ et une position.\\
-3. Les lucioles sont attirées par les lucioles plus lumineuses.\\
-4. L'attirance décroît lorsque la distance augmente.
+1. Chaque luciole a une luminosité $I$ et une position.\\
+2. Les lucioles sont attirées par les lucioles plus lumineuses.\\
+3. L'attirance décroît lorsque la distance augmente.
 \end{frame}
+
+\begin{frame}{Exemple - Algorithme des lucioles}
+  \textit{On veut aller au bas de la montagne.}
+  \begin{figure}[tb]
+    \centering
+    \includegraphics<1>[width=0.7\textwidth]{figures/firefly1_v2.pdf}
+    \includegraphics<2>[width=0.7\textwidth]{figures/firefly2_v2.pdf}
+    \includegraphics<3>[width=0.7\textwidth]{figures/firefly3_v2.pdf}
+  \end{figure} 
+\end{frame}
+
 
 \begin{frame}{Algorithme des lucioles}
   $N$ lucioles à des positions $\bm{x}_i$\\
-  On optimise la fonction $f(\bm{x})$
+  On optimise la fonction $f(\bm{x})$\\
+  $I_i\propto f(\bm{x_i})$
+  
+     % $\beta_0 $: Attirance\\ $\gamma :$ Portée\\$\alpha$ : Exploration
+
   \vspace{0.5cm}
   \hrule 
+  Si $I_j>I_i$
   \begin{align*}
-    x_i \rightarrow x_{i} +  \highlight[myblue]{\beta_0\text{e}^{-\gamma r_{ij}^2}(\bm{x}_j-\bm{x}_i)}+ \highlight[myred]{\alpha\epsilon_i}
+    \bm{x}_i \rightarrow \bm{x}_{i} +  \highlight[myblue]{\beta_0\text{e}^{-\gamma r_{ij}^2}(\bm{x}_j-\bm{x}_i)}+ \highlight[myred]{\alpha\epsilon_i}
   \end{align*}
   $\beta_0=0$ : Marche aléatoire\\
   ($\gamma=0$ : Optimisation par essaims particulaires)
@@ -162,23 +205,71 @@
 % \end{frame}
 
 
+
+
 \begin{frame}{Exemple - Algorithme des lucioles}
-  \textit{On cherche à descendre de la montagne.}
-  \begin{figure}[tb]
+  \textit{Trouver un minimum en 2D}
+   \begin{figure}[tb]
     \centering
-    \includegraphics<1>[width=0.7\textwidth]{figures/firefly1.pdf}
-    \includegraphics<2>[width=0.7\textwidth]{figures/firefly2.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/fireflyout1.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/fireflyout2.pdf}
   \end{figure}
 \end{frame}
 
 \input{sections/evolutionary.tex}
 
-\begin{frame}{Comparaison des algorithmes}
+\begin{frame}{Exemple - Algorithme des lucioles}
+  Vidéo
+\end{frame}
+
+
+\begin{frame}{Résumé des algorithmes}
+\begin{table}[h!]
+  % \caption{caption here}
+  % \label{tab/:tablename}
+  \centering
+  \begin{tabular}{ccc}
+  \hline\\
+  \textbf{Tabou} & \textbf{Lucioles} & \textbf{Évolutif}\\
+  \hline\\
+
+  Local & Global & Global\\\\
+  Déterministe & Stochastique & Stochastique\\
+    - & $\beta_0,\gamma,\alpha$ & \\
+  \includegraphics[width=3cm]{figures/tabou2v2.pdf}& \includegraphics[width=2.7cm]{figures/firefly2_v2.pdf}\\
+  \hline
+  \end{tabular}
+\end{table}
   
+\end{frame} 
+
+
+\section{Problème du vendeur}
+\begin{frame}{Problème du vendeur}
+  \textbf{Travelling salesman problem}\\
+  Un vendeur veut visiter $N$ habitations et marcher le moins possible.\\
+  \textit{Dans quel ordre doit-il visiter les $N$ maisons?}
+  \begin{figure}[b]
+    \centering
+    \includegraphics[width=0.28\textwidth]{figures/salesman_tabu_n10_1.pdf}
+    \quad
+    \includegraphics[width=0.28\textwidth]{figures/salesman_tabu_n10_2.pdf}
+    \quad
+    \includegraphics[width=0.28\textwidth]{figures/salesman_tabu_n10_3.pdf}
+    % \caption{Caption here}
+    % \label{fig:figure1}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Problème du vendeur}
-  
+$N=20$
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.32\textwidth]{figures/salesman_tabu_n20.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/salesman_firefly_n20.pdf}
+\end{figure}
+\textbf{Tabou :} 35.7656236297 (moyen 40.1709380389)
+\textbf{Lucioles :} 37.2932715277 (moyen 42.413128312)
 \end{frame}
 
 

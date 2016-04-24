@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.1)  23 APR 2016 23:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.24)  24 APR 2016 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1556,6 +1556,10 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/transparent.sty
 Package: transparent 2007/01/08 v1.0 Transparency via pdfTeX's color stack (HO)
 
+)
+(/usr/share/texmf/tex/latex/beamer/base/multimedia/multimedia.sty
+Package: multimedia 2012/05/02 ver 0.02
+\mm@movie=\count215
 ) (./main.aux)
 \openout1 = `main.aux'.
 
@@ -1643,16 +1647,16 @@ LaTeX Font Info:    Font shape `T1/zplj/m/n' will be
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count215
+\scratchcounter=\count216
 \scratchdimen=\dimen229
 \scratchbox=\box61
-\nofMPsegments=\count216
-\nofMParguments=\count217
+\nofMPsegments=\count217
+\nofMParguments=\count218
 \everyMPshowfont=\toks53
-\MPscratchCnt=\count218
+\MPscratchCnt=\count219
 \MPscratchDim=\dimen230
-\MPnumerator=\count219
-\makeMPintoPDFobject=\count220
+\MPnumerator=\count220
+\makeMPintoPDFobject=\count221
 \everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1679,7 +1683,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count221
+\c@section@level=\count222
 )
 LaTeX Info: Redefining \ref on input line 69.
 LaTeX Info: Redefining \pageref on input line 69.
@@ -1726,9 +1730,9 @@ Package frenchb.ldf Warning: Setting StandardEnumerateEnv=true for
 LaTeX Info: Redefining \up on input line 69.
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 69.
-\c@lstlisting=\count222
-\c@mv@tabular=\count223
-\c@mv@boldtabular=\count224
+\c@lstlisting=\count223
+\c@mv@tabular=\count224
+\c@mv@boldtabular=\count225
 
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
@@ -1754,13 +1758,13 @@ LaTeX Font Info:    Font shape `T1/zplj/m/n' will be
 LaTeX Font Info:    Font shape `T1/zplj/m/n' will be
 (Font)              scaled to size 10.0pt on input line 72.
 
-<logos/ul.pdf, id=13, 249.17812pt x 102.65552pt>
+<logos/ul.pdf, id=26, 249.17812pt x 102.65552pt>
 File: logos/ul.pdf Graphic file (type pdf)
  <use logos/ul.pdf>
 Package pdftex.def Info: logos/ul.pdf used on input line 72.
 (pdftex.def)             Requested size: 69.0622pt x 28.45274pt.
 
-<logos/dynamica.jpg, id=14, 214.55156pt x 195.73125pt>
+<logos/dynamica.jpg, id=27, 214.55156pt x 195.73125pt>
 File: logos/dynamica.jpg Graphic file (type jpg)
 
 <use logos/dynamica.jpg>
@@ -1780,7 +1784,7 @@ LaTeX Font Info:    Font shape `T1/zplj/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/zplj/b/n' will be
 (Font)              scaled to size 10.95pt on input line 12.
 
-<figures/schema_optimisation1.pdf, id=25, 845.04686pt x 597.50786pt>
+<figures/schema_optimisation1.pdf, id=38, 845.04686pt x 597.50786pt>
 File: figures/schema_optimisation1.pdf Graphic file (type pdf)
 
 <use figures/schema_optimisation1.pdf>
@@ -1811,128 +1815,286 @@ Package pdftex.def Info: figures/schema_optimisation1.pdf used on input line 12
 ] [6
 
 ]
-LaTeX Font Info:    Font shape `T1/zplj/m/it' will be
-(Font)              scaled to size 10.95pt on input line 107.
+LaTeX Font Info:    Font shape `T1/qhv/m/sc' will be
+(Font)              scaled to size 12.72389pt on input line 95.
  [7
 
 ]
-<figures/tabou1.pdf, id=80, 345.74376pt x 224.9992pt>
-File: figures/tabou1.pdf Graphic file (type pdf)
- <use figures/tabou1.pdf>
-Package pdftex.def Info: figures/tabou1.pdf used on input line 119.
-(pdftex.def)             Requested size: 215.10196pt x 139.98215pt.
+LaTeX Font Info:    Font shape `T1/zplj/m/it' will be
+(Font)              scaled to size 10.95pt on input line 107.
+ [8
 
-[8
+]
+<figures/tabou1v2.pdf, id=97, 334.74677pt x 206.88486pt>
+File: figures/tabou1v2.pdf Graphic file (type pdf)
 
- <./figures/tabou1.pdf>]
-<figures/tabou2.pdf, id=102, 345.74376pt x 224.9992pt>
-File: figures/tabou2.pdf Graphic file (type pdf)
-
-<use figures/tabou2.pdf>
-Package pdftex.def Info: figures/tabou2.pdf used on input line 119.
-(pdftex.def)             Requested size: 215.10196pt x 139.98215pt.
+<use figures/tabou1v2.pdf>
+Package pdftex.def Info: figures/tabou1v2.pdf used on input line 119.
+(pdftex.def)             Requested size: 245.83282pt x 151.937pt.
  [9
 
- <./figures/tabou2.pdf>]
-<figures/tabou3.pdf, id=131, 345.74376pt x 224.9992pt>
-File: figures/tabou3.pdf Graphic file (type pdf)
+ <./figures/tabou1v2.pdf>]
+<figures/tabou2v2.pdf, id=105, 334.74677pt x 206.88486pt>
+File: figures/tabou2v2.pdf Graphic file (type pdf)
 
-<use figures/tabou3.pdf>
-Package pdftex.def Info: figures/tabou3.pdf used on input line 119.
-(pdftex.def)             Requested size: 215.10196pt x 139.98215pt.
+<use figures/tabou2v2.pdf>
+Package pdftex.def Info: figures/tabou2v2.pdf used on input line 119.
+(pdftex.def)             Requested size: 245.83282pt x 151.937pt.
  [10
 
- <./figures/tabou3.pdf>]
+ <./figures/tabou2v2.pdf>]
+<figures/tabou3v2.pdf, id=113, 334.74677pt x 206.88486pt>
+File: figures/tabou3v2.pdf Graphic file (type pdf)
+
+<use figures/tabou3v2.pdf>
+Package pdftex.def Info: figures/tabou3v2.pdf used on input line 119.
+(pdftex.def)             Requested size: 245.83282pt x 151.937pt.
+ [11
+
+ <./figures/tabou3v2.pdf>]
 LaTeX Font Info:    Font shape `T1/zplj/m/n' will be
-(Font)              scaled to size 8.0pt on input line 133.
+(Font)              scaled to size 8.0pt on input line 131.
 LaTeX Font Info:    Font shape `T1/zplj/m/n' will be
-(Font)              scaled to size 6.1pt on input line 133.
-LaTeX Font Info:    Try loading font information for U+npxsya on input line 133
+(Font)              scaled to size 6.1pt on input line 131.
+LaTeX Font Info:    Try loading font information for U+npxsya on input line 131
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxsya.fd
 File: unpxsya.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsya.
 )
-LaTeX Font Info:    Try loading font information for U+npxsyb on input line 133
+LaTeX Font Info:    Try loading font information for U+npxsyb on input line 131
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxsyb.fd
 File: unpxsyb.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyb.
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 133.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 131.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+npxmia on input line 133
+LaTeX Font Info:    Try loading font information for U+npxmia on input line 131
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxmia.fd
 File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
 )
-LaTeX Font Info:    Try loading font information for U+npxsyc on input line 133
+LaTeX Font Info:    Try loading font information for U+npxsyc on input line 131
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxsyc.fd
 File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 )
 LaTeX Font Info:    Font shape `T1/zplj/b/n' will be
-(Font)              scaled to size 8.0pt on input line 133.
+(Font)              scaled to size 8.0pt on input line 131.
 LaTeX Font Info:    Font shape `T1/zplj/b/n' will be
-(Font)              scaled to size 6.1pt on input line 133.
- [11
+(Font)              scaled to size 6.1pt on input line 131.
 
-] [12
+<figures/3dtabufunc.pdf, id=121, 397.76253pt x 328.50507pt>
+File: figures/3dtabufunc.pdf Graphic file (type pdf)
 
-]
-<figures/firefly1.pdf, id=184, 345.74376pt x 224.9992pt>
-File: figures/firefly1.pdf Graphic file (type pdf)
+<use figures/3dtabufunc.pdf>
+Package pdftex.def Info: figures/3dtabufunc.pdf used on input line 131.
+(pdftex.def)             Requested size: 215.10196pt x 177.65074pt.
+ [12
 
-<use figures/firefly1.pdf>
-Package pdftex.def Info: figures/firefly1.pdf used on input line 172.
-(pdftex.def)             Requested size: 215.10196pt x 139.98215pt.
+ <./figures/3dtabufunc.pdf>]
+<figures/3dtabufunc2.pdf, id=133, 473.67418pt x 456.34543pt>
+File: figures/3dtabufunc2.pdf Graphic file (type pdf)
+
+<use figures/3dtabufunc2.pdf>
+Package pdftex.def Info: figures/3dtabufunc2.pdf used on input line 143.
+(pdftex.def)             Requested size: 184.3758pt x 177.62584pt.
  [13
 
- <./figures/firefly1.pdf>]
-<figures/firefly2.pdf, id=266, 345.74376pt x 224.9992pt>
-File: figures/firefly2.pdf Graphic file (type pdf)
+ <./figures/3dtabufunc2.pdf>] [14
 
-<use figures/firefly2.pdf>
-Package pdftex.def Info: figures/firefly2.pdf used on input line 172.
-(pdftex.def)             Requested size: 215.10196pt x 139.98215pt.
- [14
-
- <./figures/firefly2.pdf>]
-(./sections/evolutionary.tex [15
+] [15
 
 ]
-<figures/cycle_evolution.pdf, id=401, 845.04686pt x 597.50786pt>
+<figures/firefly1_v2.pdf, id=151, 451.00076pt x 298.50409pt>
+File: figures/firefly1_v2.pdf Graphic file (type pdf)
+
+<use figures/firefly1_v2.pdf>
+Package pdftex.def Info: figures/firefly1_v2.pdf used on input line 170.
+(pdftex.def)             Requested size: 215.10196pt x 142.37392pt.
+ [16
+
+ <./figures/firefly1_v2.pdf>]
+<figures/firefly2_v2.pdf, id=159, 451.00076pt x 298.50409pt>
+File: figures/firefly2_v2.pdf Graphic file (type pdf)
+
+<use figures/firefly2_v2.pdf>
+Package pdftex.def Info: figures/firefly2_v2.pdf used on input line 170.
+(pdftex.def)             Requested size: 215.10196pt x 142.37392pt.
+ [17
+
+ <./figures/firefly2_v2.pdf>]
+<figures/firefly3_v2.pdf, id=168, 451.00076pt x 298.50409pt>
+File: figures/firefly3_v2.pdf Graphic file (type pdf)
+
+<use figures/firefly3_v2.pdf>
+Package pdftex.def Info: figures/firefly3_v2.pdf used on input line 170.
+(pdftex.def)             Requested size: 215.10196pt x 142.37392pt.
+ [18
+
+ <./figures/firefly3_v2.pdf>] [19
+
+]
+<figures/fireflyout1.pdf, id=184, 433.62pt x 433.62pt>
+File: figures/fireflyout1.pdf Graphic file (type pdf)
+
+<use figures/fireflyout1.pdf>
+Package pdftex.def Info: figures/fireflyout1.pdf used on input line 217.
+(pdftex.def)             Requested size: 150.57372pt x 150.57169pt.
+
+<figures/fireflyout2.pdf, id=185, 433.62pt x 433.62pt>
+File: figures/fireflyout2.pdf Graphic file (type pdf)
+
+<use figures/fireflyout2.pdf>
+Package pdftex.def Info: figures/fireflyout2.pdf used on input line 217.
+(pdftex.def)             Requested size: 150.57372pt x 150.57169pt.
+ [20
+
+ <./figures/fireflyout1.pdf> <./figures/fireflyout2.pdf
+
+pdfTeX warning: pdflatex (file ./figures/fireflyout2.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>] (./sections/evolutionary.tex [21
+
+]
+<figures/cycle_evolution.pdf, id=225, 845.04686pt x 597.50786pt>
 File: figures/cycle_evolution.pdf Graphic file (type pdf)
 
 <use figures/cycle_evolution.pdf>
-Package pdftex.def Info: figures/cycle_evolution.pdf used on input line 21.
+Package pdftex.def Info: figures/cycle_evolution.pdf used on input line 25.
 (pdftex.def)             Requested size: 291.92444pt x 206.41394pt.
- [16
+ [22
 
  <./figures/cycle_evolution.pdf>]
-<figures/triforce.pdf, id=436, 845.04686pt x 597.50786pt>
+<figures/triforce.pdf, id=260, 845.04686pt x 597.50786pt>
 File: figures/triforce.pdf Graphic file (type pdf)
 
 <use figures/triforce.pdf>
-Package pdftex.def Info: figures/triforce.pdf used on input line 30.
+Package pdftex.def Info: figures/triforce.pdf used on input line 34.
 (pdftex.def)             Requested size: 291.92444pt x 206.41394pt.
- [17
+ [23
 
- <./figures/triforce.pdf>]) [18
+ <./figures/triforce.pdf>]
+<figures/knapsack.pdf, id=296, 648.64023pt x 222.0767pt>
+File: figures/knapsack.pdf Graphic file (type pdf)
+
+<use figures/knapsack.pdf>
+Package pdftex.def Info: figures/knapsack.pdf used on input line 45.
+(pdftex.def)             Requested size: 261.19826pt x 89.42888pt.
+ [24
+
+ <./figures/knapsack.pdf>]
+<figures/bitString.pdf, id=311, 359.69382pt x 58.619pt>
+File: figures/bitString.pdf Graphic file (type pdf)
+
+<use figures/bitString.pdf>
+Package pdftex.def Info: figures/bitString.pdf used on input line 58.
+(pdftex.def)             Requested size: 92.1879pt x 15.02322pt.
+
+<figures/croisement.pdf, id=312, 1021.33223pt x 152.87112pt>
+File: figures/croisement.pdf Graphic file (type pdf)
+
+<use figures/croisement.pdf>
+Package pdftex.def Info: figures/croisement.pdf used on input line 58.
+(pdftex.def)             Requested size: 261.19826pt x 39.09474pt.
+
+<figures/mutation.pdf, id=313, 1021.33223pt x 58.619pt>
+File: figures/mutation.pdf Graphic file (type pdf)
+
+<use figures/mutation.pdf>
+Package pdftex.def Info: figures/mutation.pdf used on input line 58.
+(pdftex.def)             Requested size: 261.19826pt x 14.99101pt.
+ [25
+
+ <./figures/bitString.pdf> <./figures/croisement.pdf
+
+pdfTeX warning: pdflatex (file ./figures/croisement.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+> <./figures/mutation.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mutation.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>]) [26
 
 ]
-Overfull \hbox (0.38615pt too wide) in paragraph at lines 182--182
+File: figures/tabou2v2.pdf Graphic file (type pdf)
+ <use figures/tabou2v2.pdf>
+Package pdftex.def Info: figures/tabou2v2.pdf used on input line 244.
+(pdftex.def)             Requested size: 85.35826pt x 52.75336pt.
+File: figures/firefly2_v2.pdf Graphic file (type pdf)
+ <use figures/firefly2_v2.pdf>
+Package pdftex.def Info: figures/firefly2_v2.pdf used on input line 244.
+(pdftex.def)             Requested size: 76.82234pt x 50.84521pt.
+ [27
+
+] [28
+
+]
+<figures/salesman_tabu_n10_1.pdf, id=351, 249.69284pt x 245.718pt>
+File: figures/salesman_tabu_n10_1.pdf Graphic file (type pdf)
+
+<use figures/salesman_tabu_n10_1.pdf>
+Package pdftex.def Info: figures/salesman_tabu_n10_1.pdf used on input line 262
+.
+(pdftex.def)             Requested size: 86.04079pt x 84.67155pt.
+
+<figures/salesman_tabu_n10_2.pdf, id=352, 249.69284pt x 245.718pt>
+File: figures/salesman_tabu_n10_2.pdf Graphic file (type pdf)
+
+<use figures/salesman_tabu_n10_2.pdf>
+Package pdftex.def Info: figures/salesman_tabu_n10_2.pdf used on input line 262
+.
+(pdftex.def)             Requested size: 86.04079pt x 84.67155pt.
+
+<figures/salesman_tabu_n10_3.pdf, id=353, 249.69284pt x 245.718pt>
+File: figures/salesman_tabu_n10_3.pdf Graphic file (type pdf)
+
+<use figures/salesman_tabu_n10_3.pdf>
+Package pdftex.def Info: figures/salesman_tabu_n10_3.pdf used on input line 262
+.
+(pdftex.def)             Requested size: 86.04079pt x 84.67155pt.
+ [29
+
+ <./figures/salesman_tabu_n10_1.pdf> <./figures/salesman_tabu_n10_2.pdf
+
+pdfTeX warning: pdflatex (file ./figures/salesman_tabu_n10_2.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./figures/salesman_tabu_n10_3.pdf
+
+pdfTeX warning: pdflatex (file ./figures/salesman_tabu_n10_3.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>] <figures/salesman_tabu_n20.pdf, id=363, 322.50487pt x 303.534pt>
+File: figures/salesman_tabu_n20.pdf Graphic file (type pdf)
+
+<use figures/salesman_tabu_n20.pdf>
+Package pdftex.def Info: figures/salesman_tabu_n20.pdf used on input line 273.
+(pdftex.def)             Requested size: 98.335pt x 92.54762pt.
+
+<figures/salesman_firefly_n20.pdf, id=364, 322.50487pt x 303.534pt>
+File: figures/salesman_firefly_n20.pdf Graphic file (type pdf)
+
+<use figures/salesman_firefly_n20.pdf>
+Package pdftex.def Info: figures/salesman_firefly_n20.pdf used on input line 27
+3.
+(pdftex.def)             Requested size: 98.335pt x 92.54762pt.
+
+Overfull \hbox (0.38615pt too wide) in paragraph at lines 273--273
 [][]  
  []
 
-[19
+[30
 
-]
+ <./figures/salesman_tabu_n20.pdf> <./figures/salesman_firefly_n20.pdf
+
+pdfTeX warning: pdflatex (file ./figures/salesman_firefly_n20.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -1942,41 +2104,44 @@ Overfull \hbox (0.38615pt too wide) in paragraph at lines 182--182
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 276.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 276.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 276.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 276.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
+(rerunfilecheck)             Checksum: 9E1B316B293EBCB32516F033A787908E;165.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 276.
  ) 
 Here is how much of TeX's memory you used:
- 24293 strings out of 493304
- 430305 string characters out of 6139872
- 543582 words of memory out of 5000000
- 26988 multiletter control sequences out of 15000+600000
- 75184 words of font info for 101 fonts, out of 8000000 for 9000
+ 24573 strings out of 493304
+ 436097 string characters out of 6139871
+ 546216 words of memory out of 5000000
+ 27225 multiletter control sequences out of 15000+600000
+ 80052 words of font info for 105 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 52i,15n,77p,1056b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/share/
-texlive/texmf-dist/fonts/enc/dvips/newtx/ntxmiaalt.enc}{/usr/share/texlive/texm
-f-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
+ 52i,15n,77p,1056b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/share/texlive/texmf-dist/f
+onts/enc/dvips/newtx/ntxmiaalt.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
 ps/newpx/a_nyan3h.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}</
 usr/share/texlive/texmf-dist/fonts/type1/public/newpx/TeXGyrePagellaX-Bold.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/newpx/TeXGyrePagellaX-Italic.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/TeXGyrePagellaX-Reg
-ular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/pxfonts/pxsy.pfb></usr/share/
-texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/pxfonts/rpxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
-lri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplx-regular.
-pfb>
-Output written on main.pdf (19 pages, 231236 bytes).
+ular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/newtx/ntxsyralt.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/pxfonts/pxsy.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/wasy/wasy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/newpx/zplx-regular.pfb>
+Output written on main.pdf (30 pages, 481043 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
- 354 compressed objects within 4 object streams
- 39 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 434 PDF objects out of 1000 (max. 8388607)
+ 320 compressed objects within 4 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

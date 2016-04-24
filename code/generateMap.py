@@ -43,8 +43,7 @@ def showPoints(U):
 if __name__ == '__main__':
 	N = 20
 	U = generatePoints(N)
-	np.savetxt("geometricPosition.txt",U)
+	np.savetxt("./salesman/geometricPosition_"+str(N)+".txt",U)
 	Dict = getDistance(U)
-	saveDist("geometricDistance.txt",Dict)
-
+	saveDist("./salesman/geometricDistance_"+str(N)+".txt",Dict)
 	showPoints(U)

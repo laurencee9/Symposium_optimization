@@ -1,4 +1,8 @@
 %!TEX root = ../main.tex
+\newcommand{\vcenteredinclude}[1]{\begingroup
+\setbox0=\hbox{\includegraphics[width = 0.3\textwidth]{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
 \begin{frame}{Algorithmes évolutionniste}
    \textbf{Algorithmes évolutionnistes (AE)}\\
   \textit{Type : }Métaheuristique\\
@@ -27,4 +31,28 @@
     \centering
     \includegraphics<1>[width=0.95\textwidth]{figures/triforce.pdf}
 \end{figure} 
+\end{frame}
+
+\begin{frame}{Problème du sac à dos}
+\textbf{Knapsack problem}\\
+Un revendeur de chocolat doit distribuer sa précieuse cargaison et récolter ses gains. Malheureusement, il n'a le temps de faire qu'une seule tournée avant que son fournisseur n'arrive et son sac à dos peut transporter au plus une masse $M$. \\
+\textit{Quel est le sous-ensemble d'objets lui permettant de garder ses deux jambes?}
+  
+\begin{figure}[tb]
+    \centering
+    \includegraphics<1>[width=0.85\textwidth]{figures/knapsack.pdf}
+\end{figure} 
+\end{frame}
+
+\begin{frame}{Implémentation de l'AE}
+\begin{itemize}
+  \item \textbf{Représentation du génome : } \vcenteredinclude{figures/bitString.pdf}
+  \item \textbf{Niveau d'adaptation :} Prix total des objets sélectionnés 
+  \item \textbf{Sélection des parents : } Tournoi
+  \item \textbf{Croisement des parents : } \\ \vspace{5pt}
+  \includegraphics<1>[width=0.85\textwidth]{figures/croisement.pdf}
+  \item \textbf{Mutation :} \\ \vspace{5pt}
+  \includegraphics<1>[width=0.85\textwidth]{figures/mutation.pdf}
+\end{itemize}
+  
 \end{frame}
