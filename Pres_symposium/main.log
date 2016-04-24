@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2015.10.15)  24 APR 2016 09:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2015.10.15)  24 APR 2016 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1911,47 +1911,47 @@ Package pdftex.def Info: figures/3dtabufunc2.pdf used on input line 136.
 ] [12
 
 ]
-[13
-
-] <figures/firefly1_v2.pdf, id=123, 451.00076pt x 298.50409pt>
+<figures/firefly1_v2.pdf, id=115, 451.00076pt x 298.50409pt>
 File: figures/firefly1_v2.pdf Graphic file (type pdf)
 
 <use figures/firefly1_v2.pdf>
-Package pdftex.def Info: figures/firefly1_v2.pdf used on input line 198.
+Package pdftex.def Info: figures/firefly1_v2.pdf used on input line 163.
 (pdftex.def)             Requested size: 215.10196pt x 142.37392pt.
- [14
+ [13
 
  <./figures/firefly1_v2.pdf>]
-<figures/firefly2_v2.pdf, id=131, 451.00076pt x 298.50409pt>
+<figures/firefly2_v2.pdf, id=124, 451.00076pt x 298.50409pt>
 File: figures/firefly2_v2.pdf Graphic file (type pdf)
 
 <use figures/firefly2_v2.pdf>
-Package pdftex.def Info: figures/firefly2_v2.pdf used on input line 198.
+Package pdftex.def Info: figures/firefly2_v2.pdf used on input line 163.
 (pdftex.def)             Requested size: 215.10196pt x 142.37392pt.
- [15
+ [14
 
  <./figures/firefly2_v2.pdf>]
-<figures/firefly3_v2.pdf, id=139, 451.00076pt x 298.50409pt>
+<figures/firefly3_v2.pdf, id=132, 451.00076pt x 298.50409pt>
 File: figures/firefly3_v2.pdf Graphic file (type pdf)
 
 <use figures/firefly3_v2.pdf>
-Package pdftex.def Info: figures/firefly3_v2.pdf used on input line 198.
+Package pdftex.def Info: figures/firefly3_v2.pdf used on input line 163.
 (pdftex.def)             Requested size: 215.10196pt x 142.37392pt.
- [16
+ [15
 
- <./figures/firefly3_v2.pdf>]
+ <./figures/firefly3_v2.pdf>] [16
+
+]
 <figures/fireflyout1.pdf, id=147, 433.62pt x 433.62pt>
 File: figures/fireflyout1.pdf Graphic file (type pdf)
 
 <use figures/fireflyout1.pdf>
-Package pdftex.def Info: figures/fireflyout1.pdf used on input line 208.
+Package pdftex.def Info: figures/fireflyout1.pdf used on input line 210.
 (pdftex.def)             Requested size: 150.57372pt x 150.57169pt.
 
 <figures/fireflyout2.pdf, id=148, 433.62pt x 433.62pt>
 File: figures/fireflyout2.pdf Graphic file (type pdf)
 
 <use figures/fireflyout2.pdf>
-Package pdftex.def Info: figures/fireflyout2.pdf used on input line 208.
+Package pdftex.def Info: figures/fireflyout2.pdf used on input line 210.
 (pdftex.def)             Requested size: 150.57372pt x 150.57169pt.
  [17
 
@@ -1964,11 +1964,11 @@ ple pdfs with page group included in a single page
 ]
 File: figures/tabou2v2.pdf Graphic file (type pdf)
  <use figures/tabou2v2.pdf>
-Package pdftex.def Info: figures/tabou2v2.pdf used on input line 232.
+Package pdftex.def Info: figures/tabou2v2.pdf used on input line 234.
 (pdftex.def)             Requested size: 85.35826pt x 52.75336pt.
 File: figures/firefly2_v2.pdf Graphic file (type pdf)
  <use figures/firefly2_v2.pdf>
-Package pdftex.def Info: figures/firefly2_v2.pdf used on input line 232.
+Package pdftex.def Info: figures/firefly2_v2.pdf used on input line 234.
 (pdftex.def)             Requested size: 76.82234pt x 50.84521pt.
  [19
 
@@ -1979,7 +1979,7 @@ Package pdftex.def Info: figures/firefly2_v2.pdf used on input line 232.
 File: figures/salesman_tabu_n10_1.pdf Graphic file (type pdf)
 
 <use figures/salesman_tabu_n10_1.pdf>
-Package pdftex.def Info: figures/salesman_tabu_n10_1.pdf used on input line 250
+Package pdftex.def Info: figures/salesman_tabu_n10_1.pdf used on input line 252
 .
 (pdftex.def)             Requested size: 86.04079pt x 84.67155pt.
 
@@ -1987,7 +1987,7 @@ Package pdftex.def Info: figures/salesman_tabu_n10_1.pdf used on input line 250
 File: figures/salesman_tabu_n10_2.pdf Graphic file (type pdf)
 
 <use figures/salesman_tabu_n10_2.pdf>
-Package pdftex.def Info: figures/salesman_tabu_n10_2.pdf used on input line 250
+Package pdftex.def Info: figures/salesman_tabu_n10_2.pdf used on input line 252
 .
 (pdftex.def)             Requested size: 86.04079pt x 84.67155pt.
 
@@ -1995,15 +1995,10 @@ Package pdftex.def Info: figures/salesman_tabu_n10_2.pdf used on input line 250
 File: figures/salesman_tabu_n10_3.pdf Graphic file (type pdf)
 
 <use figures/salesman_tabu_n10_3.pdf>
-Package pdftex.def Info: figures/salesman_tabu_n10_3.pdf used on input line 250
+Package pdftex.def Info: figures/salesman_tabu_n10_3.pdf used on input line 252
 .
 (pdftex.def)             Requested size: 86.04079pt x 84.67155pt.
-
-Overfull \hbox (0.38615pt too wide) in paragraph at lines 250--250
-[][]  
- []
-
-[21
+ [21
 
  <./figures/salesman_tabu_n10_1.pdf> <./figures/salesman_tabu_n10_2.pdf
 
@@ -2013,6 +2008,31 @@ n: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./figures/salesman_tabu_n10_3.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
+>] <figures/salesman_tabu_n20.pdf, id=212, 322.50487pt x 303.534pt>
+File: figures/salesman_tabu_n20.pdf Graphic file (type pdf)
+
+<use figures/salesman_tabu_n20.pdf>
+Package pdftex.def Info: figures/salesman_tabu_n20.pdf used on input line 263.
+(pdftex.def)             Requested size: 98.335pt x 92.54762pt.
+
+<figures/salesman_firefly_n20.pdf, id=213, 322.50487pt x 303.534pt>
+File: figures/salesman_firefly_n20.pdf Graphic file (type pdf)
+
+<use figures/salesman_firefly_n20.pdf>
+Package pdftex.def Info: figures/salesman_firefly_n20.pdf used on input line 26
+3.
+(pdftex.def)             Requested size: 98.335pt x 92.54762pt.
+
+Overfull \hbox (0.38615pt too wide) in paragraph at lines 263--263
+[][]  
+ []
+
+[22
+
+ <./figures/salesman_tabu_n20.pdf> <./figures/salesman_firefly_n20.pdf
+
+pdfTeX warning: pdflatex (file ./figures/salesman_firefly_n20.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
 >]
 \tf@nav=\write6
 \openout6 = `main.nav'.
@@ -2023,21 +2043,21 @@ n: multiple pdfs with page group included in a single page
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 266.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 266.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 266.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 266.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9E1B316B293EBCB32516F033A787908E;165.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 266.
  ) 
 Here is how much of TeX's memory you used:
- 26572 strings out of 494185
- 490126 string characters out of 6156887
+ 26589 strings out of 494185
+ 490507 string characters out of 6156887
  600299 words of memory out of 5000000
- 29106 multiletter control sequences out of 15000+600000
- 77493 words of font info for 98 fonts, out of 8000000 for 9000
+ 29116 multiletter control sequences out of 15000+600000
+ 78873 words of font info for 101 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  70i,15n,134p,1056b,866s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/opt/local/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}{/opt/local/share
@@ -2054,10 +2074,10 @@ e/fonts/type1/urw/palatino/uplri8a.pfb></opt/local/share/texmf-texlive/fonts/ty
 pe1/public/newpx/zplb.pfb></opt/local/share/texmf-texlive/fonts/type1/public/ne
 wpx/zplr.pfb></opt/local/share/texmf-texlive/fonts/type1/public/newpx/zplri.pfb
 ></opt/local/share/texmf-texlive/fonts/type1/public/newpx/zplx-regular.pfb>
-Output written on main.pdf (21 pages, 313668 bytes).
+Output written on main.pdf (22 pages, 325837 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 199 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 275 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -152,13 +152,24 @@
 3. L'attirance décroît lorsque la distance augmente.
 \end{frame}
 
+\begin{frame}{Exemple - Algorithme des lucioles}
+  \textit{On veut aller au bas de la montagne.}
+  \begin{figure}[tb]
+    \centering
+    \includegraphics<1>[width=0.7\textwidth]{figures/firefly1_v2.pdf}
+    \includegraphics<2>[width=0.7\textwidth]{figures/firefly2_v2.pdf}
+    \includegraphics<3>[width=0.7\textwidth]{figures/firefly3_v2.pdf}
+  \end{figure} 
+\end{frame}
+
+
 \begin{frame}{Algorithme des lucioles}
   $N$ lucioles à des positions $\bm{x}_i$\\
   On optimise la fonction $f(\bm{x})$\\
+  $I_i\propto f(\bm{x_i})$
   
      % $\beta_0 $: Attirance\\ $\gamma :$ Portée\\$\alpha$ : Exploration
-  
- 
+
   \vspace{0.5cm}
   \hrule 
   Si $I_j>I_i$
@@ -187,15 +198,6 @@
 % \end{frame}
 
 
-\begin{frame}{Exemple - Algorithme des lucioles}
-  \textit{On veut aller au bas de la montagne.}
-  \begin{figure}[tb]
-    \centering
-    \includegraphics<1>[width=0.7\textwidth]{figures/firefly1_v2.pdf}
-    \includegraphics<2>[width=0.7\textwidth]{figures/firefly2_v2.pdf}
-    \includegraphics<3>[width=0.7\textwidth]{figures/firefly3_v2.pdf}
-  \end{figure} 
-\end{frame}
 
 
 \begin{frame}{Exemple - Algorithme des lucioles}
@@ -249,9 +251,16 @@
   \end{figure}
 \end{frame}
 
-% \begin{frame}{Algorithmes}
-  
-% \end{frame}
+\begin{frame}{Problème du vendeur}
+$N=20$
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.32\textwidth]{figures/salesman_tabu_n20.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/salesman_firefly_n20.pdf}
+\end{figure}
+\textbf{Tabou :} 35.7656236297 (moyen 40.1709380389)
+\textbf{Lucioles :} 37.2932715277 (moyen 42.413128312)
+\end{frame}
 
 
 \end{document}

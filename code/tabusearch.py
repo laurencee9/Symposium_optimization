@@ -98,7 +98,7 @@ def tabuSearch(A,tmax=100,N=20):
 
 def showPoints(U,configuration):
 
-	plt.figure(figsize=(4.2,4))
+	plt.figure(figsize=(5.5,5))
 	X = [U[configuration[i],0] for i in range(len(configuration))]
 	Y = [U[configuration[i],1] for i in range(len(configuration))]
 	plt.plot(X,Y,"-",linewidth=8,color="#0075FF")
@@ -111,7 +111,7 @@ def showPoints(U,configuration):
 	plt.yticks([])
 	plt.xlim([-0.5,10.5])
 	plt.ylim([-0.5,10.5])
-	# plt.savefig("salesman_tabu_n10_3.pdf",bbox_inches='tight')
+	plt.savefig("salesman_tabu_n20.pdf",bbox_inches='tight')
 	plt.show()
 
 
@@ -120,16 +120,22 @@ def showEvolution(distance_flow):
 	plt.show()
 
 # A = np.array([[0,4,1],[1,1,1],[1,1,1]])
-NSales = 10
-tmax=3
+NSales = 20
+tmax=100
 
 A = getDistance("./salesman/geometricDistance_"+str(NSales)+".txt")
-configuration, distance_flow, veryBest, veryBestConfi = tabuSearch(A,N=NSales,tmax=tmax)
-U = np.load("./salesman/geometricPosition_"+str(NSales)+".txt.npy")
+Y = []
+for i in range(50):
+	configuration, distance_flow, veryBest, veryBestConfi = tabuSearch(A,N=NSales,tmax=tmax)
 
+	Y.append(veryBest)
+print(np.mean(Y))
+# U = np.load("./salesman/geometricPosition_"+str(NSales)+".txt.npy")
+
+# print(veryBest)
 # showPoints(U,veryBestConfi)
-# showPoints(U,configuration)
+# showPoints(U,veryBestConfi)
 # showEvolution(distance_flow)
-print(veryBest)
+
 
 

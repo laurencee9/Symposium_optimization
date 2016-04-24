@@ -1,6 +1,7 @@
 
 import numpy as np
 import random as rdm
+import matplotlib.pyplot as plt
 
 class Firefly():
 	position = []
@@ -46,7 +47,7 @@ def initializeFirely(numberFirely,N,A):
 	
 	return Fireflies
 
-def updateFireflies(fireFlyA, fireFlyB,A, beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
+def updateFireflies(fireFlyA, fireFlyB,A, t,beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
 
 	# Move B in direction of A
 
@@ -58,21 +59,25 @@ def updateFireflies(fireFlyA, fireFlyB,A, beta0=0.5, gamma=1.0, alpha=5, delta=0
 			r += 1
 			G.append(i)
 	# print(r)
-	#on va faire 3 permutations disons
-	nPermuation = int(rdm.random()*r*gamma)
-	# nPermuation = int((beta0*np.exp(-1.0*gamma*r*r)))
+	
+	nPermuation = int(rdm.random()*len(fireFlyA.position)*np.exp(-1.0*r**2.0*gamma))
 
-	# print(nPermuation)
 	for n in range(nPermuation):
 		
 		index = G[int(np.floor(rdm.random()*len(G)))]
-
-
 		newthing = fireFlyA.position[index]
 		oldindex = fireFlyB.position.index(newthing)
 		fireFlyB.position[oldindex] = fireFlyB.position[index]
 		fireFlyB.position[index] = newthing
 
+	#random permutation
+	for asd in range(int(alpha*delta**t*rdm.random())):
+		index1 = int(np.floor(rdm.random()*len(fireFlyB.position)))
+		index2 = int(np.floor(rdm.random()*len(fireFlyB.position)))
+		u = fireFlyB.position[index1]
+		fireFlyB.position[index1] = fireFlyB.position[index2]
+		fireFlyB.position[index2] = u
+	
 	fireFlyB.intensity = getDistanceForConfiguration(fireFlyB.position,A)
 
 
@@ -87,8 +92,8 @@ def moveFirefly(Fireflies, A, t,beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
 
 			if Fireflies[j].intensity < Fireflies[i].intensity:
 			
-				updateFireflies(Fireflies[j], Fireflies[i],A, beta0=beta0, gamma=gamma, alpha=alpha, delta=delta)
-				Fireflies[i].intensity = getDistanceForConfiguration(Fireflies[i].position,A)
+				updateFireflies(Fireflies[j], Fireflies[i],A, t,beta0=beta0, gamma=gamma, alpha=alpha, delta=delta)
+				# Fireflies[i].intensity = getDistanceForConfiguration(Fireflies[i].position,A)
 				hasMoved = True
 
 		if hasMoved == False:
@@ -99,7 +104,8 @@ def moveFirefly(Fireflies, A, t,beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
 				u = Fireflies[i].position[index1]
 				Fireflies[i].position[index1] = Fireflies[i].position[index2]
 				Fireflies[i].position[index2] = u
-				Fireflies[i].intensity = getDistanceForConfiguration(Fireflies[i].position,A)
+
+			Fireflies[i].intensity = getDistanceForConfiguration(Fireflies[i].position,A)
 
 
 def doFirefly(A, numberFirely, N, tmax=100,beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
@@ -110,14 +116,40 @@ def doFirefly(A, numberFirely, N, tmax=100,beta0=0.5, gamma=1.0, alpha=5, delta=
 
 		moveFirefly(Fireflies,A,t,beta0=beta0, gamma=gamma, alpha=alpha, delta=delta)
 
-	for fire in Fireflies:
-		print(fire.intensity)
+	# for fire in Fireflies:
+	# 	print(fire.intensity)
+
+	return Fireflies
+
+def showBestSolution(U,Fireflies):
+	plt.figure(figsize=(5.5,5))
+
+	X = [U[Fireflies[0].position[i],0] for i in range(len(Fireflies[0].position))]
+	Y = [U[Fireflies[0].position[i],1] for i in range(len(Fireflies[0].position))]
+	plt.plot(X,Y,"-",linewidth=8,color="#0075FF")
+
+	for i in range(len(U)):
+		plt.plot(U[i,0],U[i,1],"o",markersize=12,markerfacecolor="white",markeredgecolor="#0075FF",markeredgewidth=4)
+	
+
+	plt.xticks([])
+	plt.yticks([])
+	plt.xlim([-0.5,10.5])
+	plt.ylim([-0.5,10.5])
+	plt.savefig("salesman_firefly_n20.pdf",bbox_inches='tight')
+	plt.show()
 
 
+N=20
 
-
-
-A = getDistance("geometricDistance.txt")
+A = getDistance("./salesman/geometricDistance_"+str(N)+".txt")
 numberFirely = 40
-N = 20
-doFirefly(A, numberFirely,  N, tmax=100, beta0=3.0, gamma=0.2, alpha=6, delta=0.95)
+Y = []
+for i in range(50):
+	Fireflies = doFirefly(A, numberFirely,  N, tmax=100, beta0=3.0, gamma=0.000, alpha=10, delta=0.97)
+	Y.append(Fireflies[0].intensity)
+print(np.mean(Y))
+
+# U = np.load("./salesman/geometricPosition_"+str(N)+".txt.npy")
+# showBestSolution(U,Fireflies)
+
