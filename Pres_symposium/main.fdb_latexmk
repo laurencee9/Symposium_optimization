@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1461534403 "main.tex" "main.pdf" "main" 1461534405
+["pdflatex"] 1461535264 "main.tex" "main.pdf" "main" 1461595704
   "./figures/3dtabufunc.pdf" 1461534005 21979 9fc6f0228187d7e3380ea4db748e5e37 ""
   "./figures/3dtabufunc2.pdf" 1461534005 32151 57f799337eb7ee66ed51bc20698bf168 ""
   "./figures/distri_distance.pdf" 1461534005 68724 68dc8afa9250885acce57fff0058d734 ""
@@ -18,7 +18,7 @@
   "./figures/tabou3v2.pdf" 1461534005 1583 c0078b6c7b0a1cc5b5613a259a9c64d1 ""
   "./logos/dynamica.jpg" 1448938970 23476 83b3700acc9c42901b9ba3a36b0b744a ""
   "./logos/ul.pdf" 1448938970 22932 35d9a9490e4d451ecb76e3ed1a9068df ""
-  "./main.out" 1461534404 165 9e1b316b293ebcb32516f033a787908e ""
+  "./main.out" 1461535266 165 9e1b316b293ebcb32516f033a787908e ""
   "/opt/local/etc/texmf/texmf.cnf" 1444759823 30201 6a75f2d09823430df2702db9c4542c3f ""
   "/opt/local/share/texmf-texlive/fonts/enc/dvips/base/8r.enc" 1400541308 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/local/share/texmf-texlive/fonts/enc/dvips/newpx/tgpdiff.enc" 1400541306 2581 8c5047e03d9c7d47a5f4a432c4b1e70a ""
@@ -333,15 +333,15 @@
   "figures/tabou3v2.pdf" 1461534005 1583 c0078b6c7b0a1cc5b5613a259a9c64d1 ""
   "logos/dynamica.jpg" 1448938970 23476 83b3700acc9c42901b9ba3a36b0b744a ""
   "logos/ul.pdf" 1448938970 22932 35d9a9490e4d451ecb76e3ed1a9068df ""
-  "main.aux" 1461534404 4826 45dc4c16be759aaaa151bff42d5b2e7b ""
-  "main.nav" 1461534404 2613 f78e6cd4ae928b5a9a23d22dbbd6666c ""
-  "main.out" 1461534404 165 9e1b316b293ebcb32516f033a787908e ""
-  "main.tex" 1461534403 9124 f6c76dc1a08429aeb49d246f42a0704c ""
+  "main.aux" 1461535266 4956 00452b57b621ac417e6adbbda025f013 ""
+  "main.nav" 1461535266 2707 282bad37472053ad0ce9defec7bff036 ""
+  "main.out" 1461535266 165 9e1b316b293ebcb32516f033a787908e ""
+  "main.tex" 1461535264 9604 dc140403e0b301a996cd55146fd9edc1 ""
   (generated)
-  "main.out"
   "main.aux"
-  "main.snm"
+  "main.out"
+  "main.nav"
   "main.pdf"
   "main.toc"
-  "main.nav"
   "main.log"
+  "main.snm"
