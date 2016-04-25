@@ -165,7 +165,12 @@ def next_generation(p_population, p_selection_method, p_elitism = True,
     if p_elitism:
         newPopulation.remove(newPopulation[randint(0,N-1)])
         newPopulation.append(deepcopy(p_population[np.argmax(fitnessList)]))
-    return newPopulation, np.max(fitnessList)
+    # To return the mean fitness parameter, we remove the individual with 0 fitness
+    modifiedFitnessList = []
+    for x in fitnessList:
+        if x > 0:
+            modifiedFitnessList.append(x)
+    return newPopulation, np.max(modifiedFitnessList), np.mean(modifiedFitnessList)
 
 def get_mostAdapted(p_population):
     fitnessList = np.array([x.fitness for x in p_population])
