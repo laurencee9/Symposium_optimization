@@ -57,9 +57,28 @@ plt.show()
 #----------------------
 #Show the shortest path
 #----------------------
+def showPoints(U,configuration,saveName):
+
+	plt.figure(figsize=(5.5,5))
+	X = [U[configuration[i],0] for i in range(len(configuration))]
+	Y = [U[configuration[i],1] for i in range(len(configuration))]
+	plt.plot(X,Y,"-",linewidth=8,color="#0075FF")
+
+	for i in range(len(U)):
+		plt.plot(U[i,0],U[i,1],"o",markersize=12,markerfacecolor="white",markeredgecolor="#0075FF",markeredgewidth=4)
+	
+
+	plt.xticks([])
+	plt.yticks([])
+	plt.xlim([-0.5,10.5])
+	plt.ylim([-0.5,10.5])
+	plt.savefig("salesman_"+saveName+".pdf",bbox_inches='tight')
+	plt.show()
+
 shortestPath = np.loadtxt(Dir+"shortestPath.txt")
-xVec = [position[i][0] for i in shortestPath]
-yVec = [position[i][1] for i in shortestPath]
-plt.plot(xVec,yVec, '-')
-showPoints(position)
+showPoints(position,shortestPath,"genetic_n20")
+# xVec = [position[i][0] for i in shortestPath]
+# yVec = [position[i][1] for i in shortestPath]
+# plt.plot(xVec,yVec, '-')
+# showPoints(position)
 
