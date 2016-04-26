@@ -1,5 +1,5 @@
-\beamer@endinputifotherversion {3.36pt}
+\beamer@endinputifotherversion {3.24pt}
 \select@language {french}
-\beamer@sectionintoc {1}{Recherche tabou}{7}{0}{1}
-\beamer@sectionintoc {2}{Algorithme des lucioles}{14}{0}{2}
-\beamer@sectionintoc {3}{Probl\IeC {\`e}me du vendeur}{23}{0}{3}
+\beamer@sectionintoc {1}{Recherche tabou}{10}{0}{1}
+\beamer@sectionintoc {2}{Algorithme des lucioles}{17}{0}{2}
+\beamer@sectionintoc {3}{Probl\IeC {\`e}me du vendeur}{31}{0}{3}
