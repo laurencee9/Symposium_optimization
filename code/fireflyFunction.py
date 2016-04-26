@@ -195,5 +195,5 @@ showFunctionFirefly(fireflies,func,xmin,xmax,ymin,ymax,n=50,name="fireflyout2.pd
 # 		R[i,j] = np.abs(func((xmin+hx*i,ymin+hy*j)))
 # ax.matshow(R,cmap="Blues", origin='lower',extent=[xmin,xmax,ymin,ymax])
 
-# line_ani = animation.FuncAnimation(fig1, update_line, tmax*extrapo, interval=100,fargs=(data, l), blit=True)
-# line_ani.save('lines.mp4')
+line_ani = animation.FuncAnimation(fig1, update_line, tmax*extrapo, interval=100,fargs=(data, l), blit=True)
+line_ani.save('lines.mp4')

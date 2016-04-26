@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 def generatePoints(N,size=10):
 	U = np.zeros((N,2))
 	for k in range(0,N):
-		U[k,0] = rdm.random()*size
-		U[k,1] = rdm.random()*size 
+		U[k,0] = rdm.random()*800
+		U[k,1] = rdm.random()*520 
 	return U
 
 def getDistance(U):
@@ -33,11 +33,24 @@ def showPoints(U):
 
 
 
-N = 10
+N = 40
 
 U = generatePoints(N)
-np.save("./salesman/geometricPosition_"+str(N)+".txt",U)
-Dict = getDistance(U)
-saveDist("./salesman/geometricDistance_"+str(N)+".txt",Dict)
+l = file("test.txt","w")
+for i in U[:,0]:
+	l.write(str(i))
+	l.write(", ")
+l.write("] [")
+
+
+for i in U[:,1]:
+	l.write(str(i))
+	l.write(", ")
+	# 
+# print(U[:,0])
+# print(U[:,1])
+# np.save("./salesman/geometricPosition_"+str(N)+".txt",U)
+# Dict = getDistance(U)
+# saveDist("./salesman/geometricDistance_"+str(N)+".txt",Dict)
 
 # showPoints(U)

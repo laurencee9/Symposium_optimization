@@ -121,15 +121,17 @@ def showEvolution(distance_flow):
 
 # A = np.array([[0,4,1],[1,1,1],[1,1,1]])
 NSales = 20
-tmax=50
+tmax=200
 
 A = getDistance("./salesman/geometricDistance_"+str(NSales)+".txt")
-Y = []
+Distance = [0.0]*200
 for i in range(100):
+	# print(i)
 	configuration, distance_flow, veryBest, veryBestConfi = tabuSearch(A,N=NSales,tmax=tmax)
-	Y.append(veryBest)
-
-np.save("N_20_tabu_best",Y)
+	Distance = [Distance[i]+distance_flow[i]/100.0 for i in range(len(distance_flow))]
+	# Y.append(veryBest)
+np.savetxt("N_20_distance",Distance)
+# np.save("N_20_tabu_best",Y)
 # U = np.load("./salesman/geometricPosition_"+str(NSales)+".txt.npy")
 
 # print(veryBest)

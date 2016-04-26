@@ -111,15 +111,15 @@ def moveFirefly(Fireflies, A, t,beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
 def doFirefly(A, numberFirely, N, tmax=100,beta0=0.5, gamma=1.0, alpha=5, delta=0.95):
 
 	Fireflies = initializeFirely(numberFirely,N,A)
-
+	time = [0.0]*tmax
 	for t in range(tmax):
 
 		moveFirefly(Fireflies,A,t,beta0=beta0, gamma=gamma, alpha=alpha, delta=delta)
-
+		time[t] = np.mean([i.intensity for i in Fireflies])
 	# for fire in Fireflies:
 	# 	print(fire.intensity)
 
-	return Fireflies
+	return Fireflies,time
 
 def showBestSolution(U,Fireflies):
 	plt.figure(figsize=(5.5,5))
@@ -143,13 +143,17 @@ def showBestSolution(U,Fireflies):
 N=20
 
 A = getDistance("./salesman/geometricDistance_"+str(N)+".txt")
-numberFirely = 40
+numberFirely = 30
 Y = []
+Distance = [0.0]*100
 for i in range(100):
-	Fireflies = doFirefly(A, numberFirely,  N, tmax=60, beta0=3.0, gamma=0.005, alpha=10, delta=0.97)
-	Y.append(Fireflies[0].intensity)
+	print(i)
+	Fireflies,time = doFirefly(A, numberFirely,  N, tmax=100, beta0=3.0, gamma=0.001, alpha=10, delta=0.97)
+	print(time[-1])
+	Distance = [Distance[i]+time[i]/100.0 for i in range(len(time))]
 
-np.save("N_20_firefly_best2",Y)
+
+np.savetxt("N_20_time_firefly",time)
 
 # U = np.load("./salesman/geometricPosition_"+str(N)+".txt.npy")
 # showBestSolution(U,Fireflies)
