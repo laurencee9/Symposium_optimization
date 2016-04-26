@@ -32,12 +32,28 @@ plt.rc('ytick', labelsize=20)
 avgAvgFitnessList = np.loadtxt(Dir+"avgAvgFitnessList.txt")
 avgMaxFitnessList = np.loadtxt(Dir+"avgMaxFitnessList.txt")
 genVec = np.arange(1,len(avgAvgFitnessList)+1)
-plt.semilogx(genVec, avgAvgFitnessList, lw = 3.)
-plt.semilogx(genVec, avgMaxFitnessList, lw = 3.)
+
+plt.figure(figsize=(6,4))
+plt.semilogx(genVec, avgAvgFitnessList, 
+	linewidth=2,color="#FF7431", label = "Moyenne")
+plt.semilogx(genVec, avgMaxFitnessList, 
+	linewidth=2,color="#2C74FF", label = "Maximale")
+
+
+leg =plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+           ncol=2, mode="expand", borderaxespad=0.,fontsize=20)
+frame = leg.get_frame()
+frame.set_facecolor('white')
+frame.set_edgecolor('none')
+for legobj in leg.legendHandles:
+    legobj.set_linewidth(8.0)
+
+plt.xlabel(r"Génération",fontsize=20)
+plt.ylabel("Adaptation normalisée",fontsize=20)
 plt.xlim([1,500])
-plt.xlabel(r"Génération")
-plt.ylabel(r"Adaptation")
-plt.show()
+plt.savefig("knapsack_adaptation.pdf",bbox_inches="tight")
+# plt.tight_layout()
+# plt.show()
 
 
 #----------------------------------------

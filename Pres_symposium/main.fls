@@ -548,6 +548,9 @@ INPUT ./figures/croisement.pdf
 INPUT figures/mutation.pdf
 INPUT ./figures/mutation.pdf
 INPUT ./figures/mutation.pdf
+INPUT figures/knapsack_adaptation.pdf
+INPUT ./figures/knapsack_adaptation.pdf
+INPUT ./figures/knapsack_adaptation.pdf
 INPUT figures/tabou2v2.pdf
 INPUT ./figures/tabou2v2.pdf
 INPUT figures/firefly2_v2.pdf
