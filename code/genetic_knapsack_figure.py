@@ -26,34 +26,34 @@ plt.rcParams['axes.linewidth'] = 2
 plt.rc('xtick', labelsize=20) 
 plt.rc('ytick', labelsize=20) 
 
-#------------------------------
-#Show the evolution of fitness
-#------------------------------
-avgAvgFitnessList = np.loadtxt(Dir+"avgAvgFitnessList.txt")
-avgMaxFitnessList = np.loadtxt(Dir+"avgMaxFitnessList.txt")
-genVec = np.arange(1,len(avgAvgFitnessList)+1)
+# #------------------------------
+# #Show the evolution of fitness
+# #------------------------------
+# avgAvgFitnessList = np.loadtxt(Dir+"avgAvgFitnessList.txt")
+# avgMaxFitnessList = np.loadtxt(Dir+"avgMaxFitnessList.txt")
+# genVec = np.arange(1,len(avgAvgFitnessList)+1)
 
-plt.figure(figsize=(6,4))
-plt.semilogx(genVec, avgAvgFitnessList, 
-	linewidth=2,color="#FF7431", label = "Moyenne")
-plt.semilogx(genVec, avgMaxFitnessList, 
-	linewidth=2,color="#2C74FF", label = "Maximale")
+# plt.figure(figsize=(6,4))
+# plt.semilogx(genVec, avgAvgFitnessList, 
+# 	linewidth=2,color="#FF7431", label = "Moyenne")
+# plt.semilogx(genVec, avgMaxFitnessList, 
+# 	linewidth=2,color="#2C74FF", label = "Maximale")
 
 
-leg =plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
-           ncol=2, mode="expand", borderaxespad=0.,fontsize=20)
-frame = leg.get_frame()
-frame.set_facecolor('white')
-frame.set_edgecolor('none')
-for legobj in leg.legendHandles:
-    legobj.set_linewidth(8.0)
+# leg =plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+#            ncol=2, mode="expand", borderaxespad=0.,fontsize=20)
+# frame = leg.get_frame()
+# frame.set_facecolor('white')
+# frame.set_edgecolor('none')
+# for legobj in leg.legendHandles:
+#     legobj.set_linewidth(8.0)
 
-plt.xlabel(r"Génération",fontsize=20)
-plt.ylabel("Adaptation normalisée",fontsize=20)
-plt.xlim([1,500])
-plt.savefig("knapsack_adaptation.pdf",bbox_inches="tight")
-# plt.tight_layout()
-# plt.show()
+# plt.xlabel(r"Génération",fontsize=20)
+# plt.ylabel("Adaptation normalisée",fontsize=20)
+# plt.xlim([1,500])
+# plt.savefig("knapsack_adaptation.pdf",bbox_inches="tight")
+# # plt.tight_layout()
+# # plt.show()
 
 
 #----------------------------------------
@@ -80,7 +80,7 @@ def interpolate(data,n):
 distList = np.loadtxt(Dir+"genomeDistList1.txt")
 
 # Interpolate
-distList = interpolate(distList,5)
+distList = np.array(interpolate(distList,5))/100
 
 # Determine optimal order for the objects
 optimalOrder = [i for i in range(len(optimalGenome)) if optimalGenome[i] == 1]
@@ -89,12 +89,21 @@ for i in range(len(optimalGenome)):
 		optimalOrder.append(i)
 
 # Init frame
-fig1 = plt.figure()
+fig1 = plt.figure(figsize=(10,4))
 ax = plt.gca()
-bars = ax.bar(np.arange(1,25),[distList[0][i] for i in optimalOrder], width = 1)
-ax.set_ylim([0,100])
+bars = ax.bar(np.arange(1,25),[distList[0][i] for i in optimalOrder], 
+	width = 1, color="#2C74FF", edgecolor = 'w', alpha = 0.7)
+ax.set_ylim([0,1])
 ax.set_xlim([1,24])
+ax.get_xaxis().set_ticks([])
+ax.set_ylabel("Distribution", fontsize=20)
+ax.set_xlabel("Génome", fontsize=20)
+
 
 # animate
-line_ani = animation.FuncAnimation(fig1, update_bars, len(distList), interval=15,fargs=(distList, bars))
+bars_ani = animation.FuncAnimation(fig1, update_bars, len(distList), 
+	interval=8,fargs=(distList, bars), repeat = False)
+# bars_ani.save('genome_dist.mp4') #Version Edward
 plt.show()
+bars_ani.save('genome_dist.mp4', writer = "avconv", bitrate = 1000,
+	fps = 40, dpi = 100)

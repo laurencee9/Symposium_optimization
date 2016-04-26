@@ -533,9 +533,6 @@ INPUT sections/evolutionary.tex
 INPUT figures/cycle_evolution.pdf
 INPUT ./figures/cycle_evolution.pdf
 INPUT ./figures/cycle_evolution.pdf
-INPUT figures/triforce.pdf
-INPUT ./figures/triforce.pdf
-INPUT ./figures/triforce.pdf
 INPUT figures/knapsack.pdf
 INPUT ./figures/knapsack.pdf
 INPUT ./figures/knapsack.pdf
