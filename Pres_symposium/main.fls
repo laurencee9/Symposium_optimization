@@ -530,9 +530,12 @@ INPUT ./figures/fireflyout2.pdf
 INPUT ./figures/fireflyout2.pdf
 INPUT sections/evolutionary.tex
 INPUT sections/evolutionary.tex
-INPUT figures/cycle_evolution.pdf
-INPUT ./figures/cycle_evolution.pdf
-INPUT ./figures/cycle_evolution.pdf
+INPUT figures/cycle_evolution1.pdf
+INPUT ./figures/cycle_evolution1.pdf
+INPUT ./figures/cycle_evolution1.pdf
+INPUT figures/cycle_evolution2.pdf
+INPUT ./figures/cycle_evolution2.pdf
+INPUT ./figures/cycle_evolution2.pdf
 INPUT figures/knapsack.pdf
 INPUT ./figures/knapsack.pdf
 INPUT ./figures/knapsack.pdf

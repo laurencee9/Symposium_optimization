@@ -2,4 +2,4 @@
 \select@language {french}
 \beamer@sectionintoc {1}{Recherche tabou}{10}{0}{1}
 \beamer@sectionintoc {2}{Algorithme des lucioles}{17}{0}{2}
-\beamer@sectionintoc {3}{Probl\IeC {\`e}me du vendeur}{32}{0}{3}
+\beamer@sectionintoc {3}{Probl\IeC {\`e}me du vendeur}{33}{0}{3}
