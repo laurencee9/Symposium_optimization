@@ -609,6 +609,9 @@ INPUT figures/distri_distance22.pdf
 INPUT ./figures/distri_distance22.pdf
 INPUT figures/distri_distance22.pdf
 INPUT ./figures/distri_distance22.pdf
+INPUT figures/travelling_salesman_problem.png
+INPUT ./figures/travelling_salesman_problem.png
+INPUT ./figures/travelling_salesman_problem.png
 OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm

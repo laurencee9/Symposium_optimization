@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2015.10.15)  27 APR 2016 15:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2015.10.15)  27 APR 2016 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2107,26 +2107,27 @@ File: figures/distri_distance22.pdf Graphic file (type pdf)
  <use figures/distri_distance22.pdf>
 Package pdftex.def Info: figures/distri_distance22.pdf used on input line 413.
 (pdftex.def)             Requested size: 261.19826pt x 157.0589pt.
-
-Overfull \hbox (0.38615pt too wide) in paragraph at lines 413--413
-[][]  
- []
-
-[46
+ [46
 
 ]
 File: figures/distri_distance22.pdf Graphic file (type pdf)
- <use figures/distri_distance22.pdf>
+
+<use figures/distri_distance22.pdf>
 Package pdftex.def Info: figures/distri_distance22.pdf used on input line 413.
 (pdftex.def)             Requested size: 261.19826pt x 157.0589pt.
-
-Overfull \hbox (0.38615pt too wide) in paragraph at lines 413--413
-[][]  
- []
-
-[47
+ [47
 
 ]
+<figures/travelling_salesman_problem.png, id=517, 642.4pt x 284.06125pt>
+File: figures/travelling_salesman_problem.png Graphic file (type png)
+
+<use figures/travelling_salesman_problem.png>
+Package pdftex.def Info: figures/travelling_salesman_problem.png used on input 
+line 423.
+(pdftex.def)             Requested size: 261.19826pt x 115.49927pt.
+ [48
+
+ <./figures/travelling_salesman_problem.png>]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -2136,20 +2137,20 @@ Overfull \hbox (0.38615pt too wide) in paragraph at lines 413--413
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 415.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 415.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 424.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 424.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 415.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 415.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 424.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 424.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 6714ED8709E9F78E0B7E1D6F188DEB41;217.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 415.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 424.
  ) 
 Here is how much of TeX's memory you used:
- 26172 strings out of 494185
- 487737 string characters out of 6156887
+ 26181 strings out of 494185
+ 487978 string characters out of 6156887
  602892 words of memory out of 5000000
- 28669 multiletter control sequences out of 15000+600000
+ 28675 multiletter control sequences out of 15000+600000
  53247 words of font info for 60 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  70i,15n,134p,1056b,867s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2174,10 +2175,10 @@ ts/type1/public/lm/lmr10.pfb></opt/local/share/texmf-texlive/fonts/type1/public
 wasy10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/newpx/zplb.pfb></
 opt/local/share/texmf-texlive/fonts/type1/public/newpx/zplr.pfb></opt/local/sha
 re/texmf-texlive/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (47 pages, 890155 bytes).
+Output written on main.pdf (48 pages, 952133 bytes).
 PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 458 compressed objects within 5 object streams
- 99 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 604 PDF objects out of 1000 (max. 8388607)
+ 462 compressed objects within 5 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 
