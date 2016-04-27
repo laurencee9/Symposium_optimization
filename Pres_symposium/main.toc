@@ -1,6 +1,6 @@
-\beamer@endinputifotherversion {3.36pt}
+\beamer@endinputifotherversion {3.24pt}
 \select@language {french}
-\beamer@sectionintoc {1}{Recherche tabou}{12}{0}{1}
-\beamer@sectionintoc {2}{Algorithme des lucioles}{19}{0}{2}
-\beamer@sectionintoc {3}{Probl\IeC {\`e}me du vendeur}{35}{0}{3}
-\beamer@sectionintoc {4}{Humain vs Machine}{44}{0}{4}
+\beamer@sectionintoc {1}{Recherche tabou}{10}{0}{1}
+\beamer@sectionintoc {2}{Algorithme des lucioles}{17}{0}{2}
+\beamer@sectionintoc {3}{Probl\IeC {\`e}me du vendeur}{34}{0}{3}
+\beamer@sectionintoc {4}{Humain vs Machine}{43}{0}{4}
