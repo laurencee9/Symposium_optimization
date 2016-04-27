@@ -88,6 +88,9 @@ for i in range(len(optimalGenome)):
 	if not i in optimalOrder:
 		optimalOrder.append(i)
 
+# Fake dist		
+# distList = np.array([[0.5 + np.random.normal(0,scale = 0.05) for i in range(24)]])
+
 # Init frame
 fig1 = plt.figure(figsize=(10,4))
 ax = plt.gca()
@@ -99,11 +102,13 @@ ax.get_xaxis().set_ticks([])
 ax.set_ylabel("Distribution", fontsize=20)
 ax.set_xlabel("Génome", fontsize=20)
 
+plt.savefig("genome_dist.pdf",bbox_inches="tight")
 
-# animate
-bars_ani = animation.FuncAnimation(fig1, update_bars, len(distList), 
-	interval=8,fargs=(distList, bars), repeat = False)
-# bars_ani.save('genome_dist.mp4') #Version Edward
-plt.show()
-bars_ani.save('genome_dist.mp4', writer = "avconv", bitrate = 1000,
-	fps = 40, dpi = 100)
+
+# # animate
+# bars_ani = animation.FuncAnimation(fig1, update_bars, len(distList), 
+# 	interval=8,fargs=(distList, bars), repeat = False)
+# # bars_ani.save('genome_dist.mp4') #Version Edward
+# plt.show()
+# bars_ani.save('genome_dist.mp4', writer = "avconv", bitrate = 1000,
+# 	fps = 40, dpi = 100)
