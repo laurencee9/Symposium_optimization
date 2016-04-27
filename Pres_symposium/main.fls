@@ -463,24 +463,14 @@ INPUT ./figures/schema_optimisation2.pdf
 INPUT figures/schema_optimisation3.pdf
 INPUT ./figures/schema_optimisation3.pdf
 INPUT ./figures/schema_optimisation3.pdf
-<<<<<<< Updated upstream
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newpx/T1-TeXGyrePagellaX-Bold-onum-kern-liga.tfm
-INPUT figures/absolute_function.pdf
-INPUT ./figures/absolute_function.pdf
-INPUT ./figures/absolute_function.pdf
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/newpx/T1-TeXGyrePagellaX-Bold-onum-kern-liga.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newpx/T1-TeXGyrePagellaX-Bold-onum-kern-liga--base.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/newpx/T1-TeXGyrePagellaX-Regular-onum-kern-liga.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newpx/T1-TeXGyrePagellaX-Regular-onum-kern-liga--base.tfm
-INPUT figures/absolute_function.pdf
-INPUT ./figures/absolute_function.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/tex-gyre/ec-qhvr-sc.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/tex-gyre/ec-qhvr-sc.tfm
-=======
 INPUT /opt/local/share/texmf-texlive/fonts/tfm/public/newpx/zpl-Bold-tosf-t1.tfm
+INPUT figures/absolute_function.pdf
+INPUT ./figures/absolute_function.pdf
+INPUT ./figures/absolute_function.pdf
+INPUT figures/absolute_function.pdf
+INPUT ./figures/absolute_function.pdf
 INPUT /opt/local/share/texmf-texlive/fonts/tfm/public/tex-gyre/ec-qhvr-sc.tfm
 INPUT /opt/local/share/texmf-texlive/fonts/tfm/public/tex-gyre/ec-qhvr-sc.tfm
->>>>>>> Stashed changes
 INPUT figures/tabou1v2.pdf
 INPUT ./figures/tabou1v2.pdf
 INPUT ./figures/tabou1v2.pdf
@@ -615,6 +605,10 @@ INPUT ./figures/airdrop_player_2.pdf
 INPUT figures/airdrop_player_3.pdf
 INPUT ./figures/airdrop_player_3.pdf
 INPUT ./figures/airdrop_player_3.pdf
+INPUT figures/distri_distance22.pdf
+INPUT ./figures/distri_distance22.pdf
+INPUT figures/distri_distance22.pdf
+INPUT ./figures/distri_distance22.pdf
 OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm

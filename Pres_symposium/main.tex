@@ -65,7 +65,7 @@
 \subtitle[Sous-titre court]{}
 \author{Edward Laurence \& Guillaume St-Onge}
 \institute{Département de physique, de génie physique, et d'optique\\ Université Laval, Québec, Canada}
-\date{11 avril 2016}
+\date{28 avril 2016}
 \begin{document}
 \begin{frame}
   \titlepage
@@ -111,6 +111,7 @@
 
 \textbf{Métaheuristique}\\
   Algorithme général qu'on doit adapter au problème considéré.
+
 \end{frame}
 
 \section{Recherche tabou}
@@ -118,13 +119,14 @@
  \textbf{Recherche Tabou}\\
   \textit{Type : }Métaheuristique\\
   \textit{Stochastique : } Non\\
-  \textit{Caractéristique : } Recherche local
+  \textit{Caractéristique : } Recherche locale
   \vspace{0.5cm}
 \hrule
 \vspace{0.2cm}
 \textbf{Principes}\\
 1. On recherche le mouvement qui minimise notre fonction.\\
-2. On ne revient pas sur nos pas (d'où \textit{tabou}).  
+2. On ne revient pas sur nos pas. (d'où \textit{tabou}).  \\
+3. Mémoire limitée (\textit{liste tabou})
 \end{frame}
 
 
@@ -353,21 +355,36 @@
   \begin{center}\textbf{Évaluation sommaire des méthodes}\end{center}
   \begin{table}
   \centering
-  \begin{tabular}{C{2.6cm}C{2cm}C{2cm}C{2cm}}
+  \begin{tabular}{R{3.5cm}C{1.4cm}C{1.6cm}C{2cm}}
   &\textbf{Tabou} & \textbf{Lucioles} & \textbf{Génétique}\\
   \hline\\
-  \textit{Qualité} & 9/10 & 7/10 & 10/10\\\\
-  \textit{Vitesse de convergence} & 10/10 & 6/10 & 8/10\\\\
-   \textit{Implémentation} & 10/10 & 6/10 & 9/10 \\
+  \textit{Qualité} & A & B- & A+\\
+  \textit{Vitesse de convergence} & A+ & B & A\\
+  \textit{Temps de calcul} & A+ & B & C\\
+   \textit{Implémentation} & A+ & B- & A- \\
    \hline
-      &29/30 & 19/30 & 27/30\\
+    \textit{Commentaires}  & Wow& Boff & Passable\\
   \end{tabular}
 \end{table}
 \end{frame}
 
+\begin{frame}{Conclusion}
+  \begin{itemize}
+    \item \textit{Trois méthodes} : Tabou, Lucioles, Génétique.
+    \item Chaque méthode a ses forces et faiblesses.
+    \item Solution à des problèmes complexes.
+  \end{itemize}
+  \pause
+  \vspace{1cm}
+  \hrule
+  \vspace{1cm}
+  \textit{Et si les humains étaient encore meilleurs?}
+\end{frame}
+
+
 \section{Humain vs Machine}
 \begin{frame}{Meilleur humain}
-  Pour $N=30$, les trois meilleurs solutions humains sont
+  Pour $N=30$, les trois meilleurs solutions humaines sont
   \begin{table}
   \centering
   \begin{tabular}{C{3cm}C{3cm}C{3cm}}
@@ -384,10 +401,15 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}
-  
+\begin{frame}{Distribution des qualités}
+   \textbf{Distribution de la qualité des solutions}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/distri_distance22.pdf}
+  \end{figure}
+  \pause
+  \vspace{-0.8cm}
+  Probabilité d'avoir aléatoirement ces solutions : $\sim 10^{-13}$
 \end{frame}
-
-
-
+  
 \end{document}
