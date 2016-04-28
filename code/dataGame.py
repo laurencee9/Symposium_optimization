@@ -1,15 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
-
+from mpl_toolkits.axes_grid.inset_locator import inset_axes
+from scipy.stats import norm
 
 plt.rcParams['text.usetex']=True
 plt.rcParams['text.latex.preamble']=[r'\usepackage{amsmath}']
 plt.rc('font',**{'family':'serif','serif':['Computer Modern']})
 plt.rcParams['text.latex.unicode']=True
-plt.rcParams['axes.linewidth'] = 0
-plt.rc('xtick', labelsize=15) 
-plt.rc('ytick', labelsize=15) 
+plt.rcParams['axes.linewidth'] = 1
+plt.rc('xtick', labelsize=20) 
+plt.rc('ytick', labelsize=20) 
 
 
 X = [99.2737448134/840.0, 46.2177337383/840.0, 120.045368228/840.0, 721.212527429/840.0, 143.540197661/840.0, 571.776370434/840.0, 598.126366262/840.0, 52.115941352/840.0, 42.0417736644/840.0, 538.741292385/840.0, 518.263481391/840.0, 175.365846421/840.0, 175.70652408/840.0, 509.487904781/840.0, 665.220546953/840.0, 107.843690692/840.0, 250.572810286/840.0, 348.2325276/840.0, 700.317947042/840.0, 204.30380195/840.0, 71.2228867334/840.0, 69.1649534744/840.0, 167.664070007/840.0, 704.333028349/840.0, 62.667805421/840.0, 468.002140249/840.0, 673.483206803/840.0, 27.7030413392/840.0, 676.982104859/840.0, 409.041472308/840.0, 311.060650468/840.0, 469.016219537/840.0, 760.052660047/840.0, 418.631829301/840.0, 170.458711362/840.0, 84.7865298883/840.0, 2.10817852813/840.0, 260.881608219/840.0, 721.24024426/840.0, 674.855593939/840.0]
@@ -49,25 +49,65 @@ def plotSolutions(player,X,Y,rank):
 	# plt.show()
 
 def doDistribution(players):
-	Dist = [i["score"] for i in players]
+	Ytabu = np.load("ipad_tabu_best.npy")
+	YRandom = np.load("humain_random.npy")
+	Yhumain = [i["score"] for i in players]
 
-	plt.hist(Dist,bins=6,normed=True, alpha=0.5,facecolor='#0074C0',edgecolor="white",label="Lucioles")
-	plt.ylabel("Distribution",fontsize=20)
-	plt.xlabel("Distance",fontsize=20)
-	
-	plt.savefig("../Pres_symposium/figures/distribution_human.pdf")
-	plt.show()
+	ntabu, binstabu, patches = plt.hist(Ytabu,bins=np.arange(20,80,0.5), cumulative=True, histtype="step",normed=True)
+	nhumain, binshumain, patches = plt.hist(Yhumain,bins=np.arange(20,80,0.5), cumulative=True, histtype="step",normed=True)
+	nrandom, binsrandom, patches = plt.hist(YRandom,bins=np.arange(20,120,1), cumulative=True, histtype="step",normed=True)
+
+	plt.clf()
+
+	fig = plt.figure(figsize=(10,5))
+
+
+	plt.hist(Ytabu,bins=8,normed=True, alpha=1.0,facecolor='#FF9600',edgecolor="white",label="Tabou")
+	plt.hist(Yhumain,bins=5,normed=True, alpha=1.0,facecolor='#0074C0',edgecolor="white",label="Humain")
+	plt.hist(YRandom,bins=20,normed=True, alpha=1.0,facecolor='gray',edgecolor="white",label=r"Al\'eatoire")
+
+
+	ax = plt.gca()
+	ax.set_xlabel("Distance",fontsize=25)
+	ax.set_ylabel(r"Distribution",fontsize=25)
+	leg =plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+	           ncol=34, mode="expand", borderaxespad=0.,fontsize=20)
+	frame = leg.get_frame()
+	frame.set_facecolor('white')
+	frame.set_edgecolor('none')
+	h=0.2
+	# ax.set_yticks(np.arange(0.0,1.0+h,h))
+	from mpl_toolkits.axes_grid.inset_locator import inset_axes
+	inset_axes = inset_axes(ax, 
+	                    width="50%", # width = 30% of parent_bbox
+	                    height=2.0, # height : 1 inch
+	                    loc=1)
+
+	plt.plot(np.arange(20,80-0.5,0.5),ntabu,linewidth=3,color="#FF9600")
+	plt.plot(np.arange(20,80-0.5,0.5),nhumain,linewidth=3,color="#0074C0",alpha=1.0)
+
+	sigma = np.std(YRandom)
+	mu = np.mean(YRandom)
+
+
+	print(norm.cdf(np.min(Yhumain),mu,sigma))
+	plt.xlim([30,80])
+	plt.ylim([-0.001,1.001])
+	plt.yticks(np.arange(0.0,1.1,0.3))
+	plt.ylabel("Cumulative",fontsize=20)
+
+	plt.savefig("../Pres_symposium/figures/distribution_human.pdf",bbox_inches='tight')
+	# plt.show()
 
 # 1. Plot the three best solutions
 players = getSolutions(filename)
-# bestplayers = players[0:3]
-# plotSolutions(players[0],X,Y,"1")
-# plotSolutions(players[1],X,Y,"2")
-# plotSolutions(players[2],X,Y,"3")
+plotSolutions(players[0],X,Y,"1")
+plotSolutions(players[1],X,Y,"2")
+plotSolutions(players[-1],X,Y,"3")
 
 # #2. Take the output here for the plot
-# print('\\textbf{'+players[0]["name"]+"} & "+'\\textbf{'+players[1]["name"]+"} &"+'\\textbf{'+players[2]["name"]+"}\\\\")
-# print("%.2f"%players[0]["score"]+"&"+"%.2f"%players[1]["score"]+"&"+"%.2f"%players[2]["score"]+"\\\\")
+print('\\textbf{'+players[0]["name"]+"} & "+'\\textbf{'+players[1]["name"]+"} &"+'\\textbf{'+players[2]["name"]+"}\\\\")
+print("%.2f"%players[0]["score"]+"&"+"%.2f"%players[1]["score"]+"&"+"%.2f"%players[2]["score"]+"\\\\")
 
 #3. Do a distribution
 doDistribution(players)

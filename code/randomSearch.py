@@ -67,6 +67,18 @@ def showEvolution(distance_flow):
 	plt.plot(distance_flow)
 	plt.show()
 
+
+def getDistanceIpad(X,Y,sizeX,sizeY):
+	Dict_distance = {}
+	for i in range(0,len(X)):
+		for j in range(len(X)):
+			distance = np.sqrt(((X[i]-X[j])*sizeX)**2.0+((Y[i]-Y[j])*sizeY)**2.0)/100.0
+			Dict_distance[(i,j)] = distance
+			Dict_distance[(j,i)] = distance
+	return Dict_distance
+
+
+
 # A = np.array([[0,4,1],[1,1,1],[1,1,1]])
 NSales = 50
 tmax=50

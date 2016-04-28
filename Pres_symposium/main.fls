@@ -605,10 +605,9 @@ INPUT ./figures/airdrop_player_2.pdf
 INPUT figures/airdrop_player_3.pdf
 INPUT ./figures/airdrop_player_3.pdf
 INPUT ./figures/airdrop_player_3.pdf
-INPUT figures/distri_distance22.pdf
-INPUT ./figures/distri_distance22.pdf
-INPUT figures/distri_distance22.pdf
-INPUT ./figures/distri_distance22.pdf
+INPUT figures/distribution_human.pdf
+INPUT ./figures/distribution_human.pdf
+INPUT ./figures/distribution_human.pdf
 INPUT figures/travelling_salesman_problem.png
 INPUT ./figures/travelling_salesman_problem.png
 INPUT ./figures/travelling_salesman_problem.png
