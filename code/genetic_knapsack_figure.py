@@ -77,10 +77,10 @@ def interpolate(data,n):
 
 
 # Import data
-distList = np.loadtxt(Dir+"genomeDistList1.txt")
+# distList = np.loadtxt(Dir+"genomeDistList1.txt")
 
 # Interpolate
-distList = np.array(interpolate(distList,5))/100
+# distList = np.array(interpolate(distList,5))/100
 
 # Determine optimal order for the objects
 optimalOrder = [i for i in range(len(optimalGenome)) if optimalGenome[i] == 1]
@@ -89,7 +89,7 @@ for i in range(len(optimalGenome)):
 		optimalOrder.append(i)
 
 # Fake dist		
-# distList = np.array([[0.5 + np.random.normal(0,scale = 0.05) for i in range(24)]])
+distList = np.array([[0.5 + np.random.normal(0,scale = 0.05) for i in range(24)]])
 
 # Init frame
 fig1 = plt.figure(figsize=(10,4))
@@ -99,8 +99,8 @@ bars = ax.bar(np.arange(1,25),[distList[0][i] for i in optimalOrder],
 ax.set_ylim([0,1])
 ax.set_xlim([1,24])
 ax.get_xaxis().set_ticks([])
-ax.set_ylabel("Distribution", fontsize=20)
-ax.set_xlabel("Génome", fontsize=20)
+ax.set_ylabel("Fréquence", fontsize=20)
+ax.set_xlabel("Gènes", fontsize=20)
 
 plt.savefig("genome_dist.pdf",bbox_inches="tight")
 

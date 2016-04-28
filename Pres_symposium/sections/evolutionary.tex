@@ -35,9 +35,10 @@
 % \end{frame}
 
 \begin{frame}{Problème du sac à dos}
+\vspace{-10pt}
 \textbf{Knapsack problem}\\
-Un revendeur de chocolat doit distribuer sa précieuse cargaison et récolter ses gains. Malheureusement, il n'a le temps de faire qu'une seule tournée avant que son fournisseur n'arrive et son sac à dos peut transporter au plus une masse $M$. \\
-\textit{Quel est le sous-ensemble d'objets lui permettant de garder ses deux jambes?}
+Un revendeur de chocolat doit distribuer sa précieuse cargaison et récolter ses gains. Malheureusement, il n'a le temps de faire qu'une seule tournée avant que son fournisseur n'arrive. De plus, son sac à dos peut transporter au plus une masse $M$. \\
+\textit{Quel est le sous-ensemble de boîtes lui permettant de garder ses deux jambes?}
   
 \begin{figure}[tb]
     \centering
@@ -46,24 +47,49 @@ Un revendeur de chocolat doit distribuer sa précieuse cargaison et récolter se
 \end{frame}
 
 \begin{frame}{Implémentation d'un algorithme génétique}
-\vspace{-10pt}
-\begin{itemize}
-  \item \textbf{Représentation du génome : } Chaîne de bits
-  \item \textbf{Niveau d'adaptation :} Prix total des objets sélectionnés 
-  \item \textbf{Sélection des parents : } Tournoi
-  \item \textbf{Croisement des parents : } \\ \vspace{5pt}
-  \includegraphics<1>[width=0.85\textwidth]{figures/croisement.pdf}
-  \item \textbf{Mutation :} \\ \vspace{5pt}
-  \includegraphics<1>[width=0.85\textwidth]{figures/mutation.pdf}
-  \item \textbf{Élitisme :} Oui!
-\end{itemize}
-  
+   \vspace{-15pt}
+   \textbf{Représentation du génome }  \\
+   \begin{figure}[h]
+   \centering
+   \includegraphics<1>[width=0.35\textwidth]{figures/bitString.pdf} 
+   \end{figure}
+   \vspace{-5pt}
+   \textbf{Niveau d'adaptation} \\
+   L'adaptation $x_i$ d'un individu $i$ correspond à la valeur totale des objets sélectionnés. \\ \vspace{15pt}
+   \textbf{Sélection des parents } \\ 
+   Soient des individus $i,j$ choisis aléatoirement. On sélectionne $i$ si 
+   \begin{align*}
+   x_i \geq x_j
+   \end{align*}
 \end{frame}
 
-\begin{frame}{Problème du sac à dos - Distribution du génome}
+\begin{frame}{Implémentation d'un algorithme génétique}
+
+   \textbf{Croisement des parents } \\ \vspace{5pt}
+  \begin{figure}[h]
+   \centering
+   \includegraphics<1>[width=0.9\textwidth]{figures/croisement.pdf} 
+   \end{figure} 
+   \textbf{Mutation } \\ \vspace{5pt}
+  \begin{figure}[h]
+   \centering
+   \includegraphics<1>[width=0.9\textwidth]{figures/mutation.pdf} 
+   \end{figure}
+   \textit{Élitisme }
+
+\end{frame}
+
+
+\begin{frame}{Problème du sac à dos - Évolution du génome}
+\textbf{Occurence des gènes à l'intérieur de la population}
   \begin{figure}[h!]
     \centering
     \href{run:figures/genome_dist.mp4}{\includegraphics[width=0.95\textwidth]{figures/genome_dist.pdf}}
+  \end{figure}
+  \vspace{-30pt}
+  \begin{figure}[h!]
+    \centering
+    \hspace{25pt}\includegraphics[width=0.85\textwidth]{figures/formes.pdf}
   \end{figure}
 \end{frame}
 
