@@ -80,8 +80,6 @@ def showEvolution(distance_flow):
 	plt.show()
 
 # A = np.array([[0,4,1],[1,1,1],[1,1,1]])
-NSales = 50
-tmax=50
 
 NSales = 40
 tmax=1000
@@ -93,11 +91,11 @@ A = getDistanceIpad(X,Y,sizeX,sizeY)
 Y2 = []
 
 
-Y = [0.0]*10000
-for i in range(0,10000):
-	U = randomSearch(A,N=20,n=1)
+Y = [0.0]*50000
+for i in range(0,50000):
+	U = randomSearch(A,N=NSales,n=1)
 	Y[i] = U[0]
-	print Y[i]
+	# print Y[i]
 
 np.save("humain_random",Y)
 

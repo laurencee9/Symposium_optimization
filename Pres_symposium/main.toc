@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.24pt}
+\beamer@endinputifotherversion {3.36pt}
 \select@language {french}
 \beamer@sectionintoc {1}{Recherche tabou}{10}{0}{1}
 \beamer@sectionintoc {2}{Algorithme des lucioles}{17}{0}{2}

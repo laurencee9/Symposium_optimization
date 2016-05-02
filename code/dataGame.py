@@ -16,7 +16,7 @@ X = [99.2737448134/840.0, 46.2177337383/840.0, 120.045368228/840.0, 721.21252742
 Y = [413.89742215/520.0, 438.789689817/520.0, 384.84428207/520.0, 221.231401317/520.0, 460.034796674/520.0, 423.445591388/520.0, 363.78246882/520.0, 362.845977451/520.0, 459.012119514/520.0, 499.648279021/520.0, 256.729353652/520.0, 263.598711876/520.0, 171.529593994/520.0, 212.115976035/520.0, 408.300863372/520.0, 264.153691021/520.0, 365.890211866/520.0, 391.23662671/520.0, 139.097490435/520.0, 49.0149379327/520.0, 135.818792046/520.0, 372.189666315/520.0, 22.2073475458/520.0, 470.192164411/520.0, 303.99162489/520.0, 384.276077105/520.0, 218.485369279/520.0, 4.29410560891/520.0, 505.685655293/520.0, 393.866678316/520.0, 103.5628732/520.0, 22.9617359038/520.0, 342.742692415/520.0, 180.135332476/520.0, 70.0089350245/520.0, 39.0610218328/520.0, 7.33945030114/520.0, 228.317160901/520.0, 344.087021138/520.0, 87.929330981/520.0]
 
 datapoints = "ipaddata.txt"
-filename = "airdroptest.txt"
+filename = "ipad_data.txt"
 
 def getSolutions(filename):
 	fileO = open(filename,"r")
@@ -35,10 +35,10 @@ def plotSolutions(player,X,Y,rank):
 
 	fig = plt.figure(figsize=(5.5,5))
 	XLine = [X[i] for i in player["order"]]
-	YLine = [Y[i] for i in player["order"]]
+	YLine = [1.0-Y[i] for i in player["order"]]
 	plt.plot(XLine,YLine,linewidth=8,color="#0075FF")
 
-	plt.plot(X,Y,"o",markersize=12,markerfacecolor="white",markeredgecolor="#0075FF",markeredgewidth=4)
+	plt.plot(X,[1.0-uu for uu in Y],"o",markersize=12,markerfacecolor="white",markeredgecolor="#0075FF",markeredgewidth=4)
 	plt.xlim([-0.05,1.00])
 	plt.ylim([-0.05,1.00])
 	plt.yticks([])
@@ -55,14 +55,14 @@ def doDistribution(players):
 
 	ntabu, binstabu, patches = plt.hist(Ytabu,bins=np.arange(20,80,0.5), cumulative=True, histtype="step",normed=True)
 	nhumain, binshumain, patches = plt.hist(Yhumain,bins=np.arange(20,80,0.5), cumulative=True, histtype="step",normed=True)
-	nrandom, binsrandom, patches = plt.hist(YRandom,bins=np.arange(20,120,1), cumulative=True, histtype="step",normed=True)
+	nrandom, binsrandom, patches = plt.hist(YRandom,bins=np.arange(20,200,1), cumulative=True, histtype="step",normed=True)
 
 	plt.clf()
 
 	fig = plt.figure(figsize=(10,5))
 
 
-	plt.hist(Ytabu,bins=8,normed=True, alpha=1.0,facecolor='#FF9600',edgecolor="white",label="Tabou")
+	plt.hist(Ytabu,bins=5,normed=True, alpha=1.0,facecolor='#FF9600',edgecolor="white",label="Tabou")
 	plt.hist(Yhumain,bins=5,normed=True, alpha=1.0,facecolor='#0074C0',edgecolor="white",label="Humain")
 	plt.hist(YRandom,bins=20,normed=True, alpha=1.0,facecolor='gray',edgecolor="white",label=r"Al\'eatoire")
 
@@ -90,7 +90,7 @@ def doDistribution(players):
 	mu = np.mean(YRandom)
 
 
-	print(norm.cdf(np.min(Yhumain),mu,sigma))
+	print(norm.cdf(np.mean(Yhumain),mu,sigma))
 	plt.xlim([30,80])
 	plt.ylim([-0.001,1.001])
 	plt.yticks(np.arange(0.0,1.1,0.3))
@@ -106,8 +106,8 @@ plotSolutions(players[1],X,Y,"2")
 plotSolutions(players[-1],X,Y,"3")
 
 # #2. Take the output here for the plot
-print('\\textbf{'+players[0]["name"]+"} & "+'\\textbf{'+players[1]["name"]+"} &"+'\\textbf{'+players[2]["name"]+"}\\\\")
-print("%.2f"%players[0]["score"]+"&"+"%.2f"%players[1]["score"]+"&"+"%.2f"%players[2]["score"]+"\\\\")
+print('\\textbf{'+players[0]["name"]+"} & "+'\\textbf{'+players[1]["name"]+"} &"+'\\textbf{'+players[-1]["name"]+"}\\\\")
+print("%.2f"%players[0]["score"]+"&"+"%.2f"%players[1]["score"]+"&"+"%.2f"%players[-1]["score"]+"\\\\")
 
 #3. Do a distribution
 doDistribution(players)

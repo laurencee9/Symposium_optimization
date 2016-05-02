@@ -142,7 +142,7 @@ def showEvolution(distance_flow):
 
 # A = np.array([[0,4,1],[1,1,1],[1,1,1]])
 NSales = 40
-tmax=10000
+tmax=5000
 sizeX = 1004
 sizeY=668
 #Size retina
@@ -150,33 +150,33 @@ sizeY=668
 # sizeY = 924
 
 A = getDistanceIpad(X,Y,sizeX,sizeY)
-# Y2 = []
+Y2 = []
 # configuration, distance_flow, veryBest, veryBestConfi = tabuSearch(A,N=NSales,tmax=tmax,memory=200)
 # print(veryBest)
 # print(veryBestConfi)
 
-# bestofall = 1000.0
-# bestofallconf = []
-# for i in range(50):
-# 	configuration, distance_flow, veryBest, veryBestConfi = tabuSearch(A,N=NSales,tmax=tmax)
-# 	Y2.append(veryBest)
-# 	if veryBest<bestofall:
-# 		bestofall = veryBest
-# 		bestofallconf = [a for a in veryBestConfi]
-# 	print(veryBest)
-# # print(Y)
+bestofall = 1000.0
+bestofallconf = []
+for i in range(50):
+	configuration, distance_flow, veryBest, veryBestConfi = tabuSearch(A,N=NSales,tmax=tmax,memory=500)
+	Y2.append(veryBest)
+	if veryBest<bestofall:
+		bestofall = veryBest
+		bestofallconf = [a for a in veryBestConfi]
+	print(veryBest)
+# print(Y)
 
-# np.save("ipad_tabu_best",Y2)
-# print(bestofallconf,bestofall)
+np.save("ipad_tabu_best2",Y2)
+print(bestofallconf,bestofall)
 
-U = np.zeros((NSales,2))
-U[:,0] = X
-U[:,1] = Y
+# U = np.zeros((NSales,2))
+# U[:,0] = X
+# U[:,1] = Y
 
 
 # configuration, distance_flow, veryBest, veryBestConfi = tabuSearch(A,N=NSales,tmax=tmax)
 # print(veryBest)
-showPoints(U,[36, 27, 35, 31, 39, 18, 3, 26, 5, 9, 28, 23, 32, 38, 14, 6, 10, 13, 37, 12, 11, 2, 4, 16, 17, 29, 25, 33, 30, 19, 22, 34, 20, 15, 24, 7, 21, 0, 1, 8])
+# showPoints(U,[36, 27, 35, 31, 39, 18, 3, 26, 5, 9, 28, 23, 32, 38, 14, 6, 10, 13, 37, 12, 11, 2, 4, 16, 17, 29, 25, 33, 30, 19, 22, 34, 20, 15, 24, 7, 21, 0, 1, 8])
 # showPoints(U,veryBestConfi)
 # showEvolution(distance_flow)
 
